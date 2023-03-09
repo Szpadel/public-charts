@@ -17,12 +17,6 @@ services:
       credentials:
         key: '%env(STORAGE_AWS_KEY)%'
         secret: '%env(STORAGE_AWS_SECRET)%'
-  Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler:
-    arguments:
-      - 'postgresql://%env(DATABASE_USER)%:%env(DATABASE_PASSWORD)%@%env(DATABASE_HOSTNAME)%:5432/%env(DATABASE_DATABASE)%?serverVersion=%env(DATABASE_VERSION)%&charset=utf8'
-doctrine:
-  dbal:
-    url: 'postgresql://%env(DATABASE_USER)%:%env(DATABASE_PASSWORD)%@%env(DATABASE_HOSTNAME)%:5432/%env(DATABASE_DATABASE)%?serverVersion=%env(DATABASE_VERSION)%&charset=utf8'
 {{- end -}}
 
 {{- define "repman.repman.config.secrets" -}}

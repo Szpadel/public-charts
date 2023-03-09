@@ -162,6 +162,7 @@ env:
         key: password
   DATABASE_DATABASE: "{{ .Values.postgresql.database }}"
   DATABASE_VERSION: "{{ .Values.postgresql.version }}"
+  DATABASE_URL: "postgresql://%env(DATABASE_USER)%:%env(DATABASE_PASSWORD)%@%env(DATABASE_HOSTNAME)%:5432/%env(DATABASE_DATABASE)%?serverVersion=%env(DATABASE_VERSION)%&charset=utf8"
 
   STORAGE_AWS_BUCKET: "{{ .Values.minio.defaultBuckets }}"
   STORAGE_AWS_REGION: "us-east-1"
