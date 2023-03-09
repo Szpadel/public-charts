@@ -3,7 +3,7 @@ entries:
   headscale:
   - apiVersion: v2
     appVersion: 0.18.0
-    created: "2023-03-09T14:23:16.959053582+01:00"
+    created: "2023-03-09T14:27:04.364198748+01:00"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -20,7 +20,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.17.1
-    created: "2023-03-09T14:23:16.956853774+01:00"
+    created: "2023-03-09T14:27:04.361972394+01:00"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -37,7 +37,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.16.4
-    created: "2023-03-09T14:23:16.954621969+01:00"
+    created: "2023-03-09T14:27:04.359961546+01:00"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -54,7 +54,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 0.16.2
-    created: "2023-03-09T14:23:16.951340267+01:00"
+    created: "2023-03-09T14:27:04.357796358+01:00"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -72,7 +72,7 @@ entries:
   repman:
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2023-03-09T14:23:17.014345599+01:00"
+    created: "2023-03-09T14:27:04.414487079+01:00"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -87,7 +87,7 @@ entries:
       version: 17.8.3
     description: 'Repman - PHP Repository Manager: packagist proxy and host for private
       packages'
-    digest: f7e9521075c81fbcacc878a18d33248ec434e3595dc61d3fe6358656fb4314ef
+    digest: 1e41239e2ea713b73cb1a0818994a224cebda2cd7afce6dbd55be90b4896c341
     maintainers:
     - email: piotrekrogowski@gmail.com
       name: Szpadel
@@ -101,7 +101,7 @@ entries:
     version: 3.0.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2023-03-09T14:23:17.006039496+01:00"
+    created: "2023-03-09T14:27:04.405801309+01:00"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -127,7 +127,7 @@ entries:
     version: 2.1.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2023-03-09T14:23:17.001360383+01:00"
+    created: "2023-03-09T14:27:04.401142203+01:00"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -153,7 +153,7 @@ entries:
     version: 2.0.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2023-03-09T14:23:16.99691228+01:00"
+    created: "2023-03-09T14:27:04.396924179+01:00"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -178,7 +178,7 @@ entries:
     version: 1.2.2
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2023-03-09T14:23:16.991975022+01:00"
+    created: "2023-03-09T14:27:04.392219746+01:00"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -203,7 +203,7 @@ entries:
     version: 1.2.1
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2023-03-09T14:23:16.986989845+01:00"
+    created: "2023-03-09T14:27:04.387609078+01:00"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -228,7 +228,7 @@ entries:
     version: 1.2.0
   - apiVersion: v2
     appVersion: 1.2.2
-    created: "2023-03-09T14:23:16.982392466+01:00"
+    created: "2023-03-09T14:27:04.383141723+01:00"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -253,7 +253,7 @@ entries:
     version: 1.1.3
   - apiVersion: v2
     appVersion: 1.2.1
-    created: "2023-03-09T14:23:16.977718936+01:00"
+    created: "2023-03-09T14:27:04.379262442+01:00"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -278,7 +278,7 @@ entries:
     version: 1.1.2
   - apiVersion: v2
     appVersion: 1.2.0
-    created: "2023-03-09T14:23:16.973531523+01:00"
+    created: "2023-03-09T14:27:04.375322235+01:00"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -303,7 +303,7 @@ entries:
     version: 1.1.1
   - apiVersion: v2
     appVersion: 1.2.0-dev
-    created: "2023-03-09T14:23:16.969312084+01:00"
+    created: "2023-03-09T14:27:04.371902433+01:00"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -328,7 +328,7 @@ entries:
     version: 1.1.0
   - apiVersion: v2
     appVersion: 1.2.0-dev
-    created: "2023-03-09T14:23:16.963857015+01:00"
+    created: "2023-03-09T14:27:04.368046685+01:00"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -354,7 +354,7 @@ entries:
   seafile:
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2023-03-09T14:23:17.038695881+01:00"
+    created: "2023-03-09T14:27:04.438307112+01:00"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -382,7 +382,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 9.0.9
-    created: "2023-03-09T14:23:17.026333049+01:00"
+    created: "2023-03-09T14:27:04.426197771+01:00"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -408,4 +408,4 @@ entries:
     urls:
     - https://szpadel.github.io/public-charts/releases/seafile-0.1.0.tgz
     version: 0.1.0
-generated: "2023-03-09T14:23:16.948906019+01:00"
+generated: "2023-03-09T14:27:04.354601217+01:00"
