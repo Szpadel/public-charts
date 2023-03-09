@@ -17,6 +17,9 @@ services:
       credentials:
         key: '%env(STORAGE_AWS_KEY)%'
         secret: '%env(STORAGE_AWS_SECRET)%'
+doctrine:
+  dbal:
+    url: 'postgresql://%env(DATABASE_USER)%:%env(DATABASE_PASSWORD)%@%env(DATABASE_HOSTNAME)%:5432/%env(DATABASE_DATABASE)%?serverVersion=14&charset=utf8'
 {{- end -}}
 
 {{- define "repman.repman.config.secrets" -}}
