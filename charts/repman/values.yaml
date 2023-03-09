@@ -55,6 +55,20 @@ additionalControllers:
       bin/console d:m:m --no-interaction
       bin/console messenger:setup-transports --no-interaction
       bin/console assets:install --env=prod --no-interaction
+    initContainers:
+      copy-public: &copyPublic
+        enabled: true
+        image: inherit
+        command:
+        - sh
+        - -c
+        - |
+          set -euo pipefail
+          apk add --no-cache rsync
+          rsync -avu --delete /app/public/ /mnt/public/
+        volumeMounts:
+        - name: public
+          mountPath: /mnt/public
   upgrade:
     enabled: false
     type: job
@@ -63,6 +77,8 @@ additionalControllers:
       "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
     restartPolicy: OnFailure
     command: *install_command
+    initContainers:
+      copy-public: *copyPublic
   create-admin:
     enabled: false
     type: job
