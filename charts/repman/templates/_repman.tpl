@@ -17,9 +17,44 @@ services:
       credentials:
         key: '%env(STORAGE_AWS_KEY)%'
         secret: '%env(STORAGE_AWS_SECRET)%'
+  {{- if not .Values.redis.enabled }}
+  Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler:
+    arguments:
+      - 'postgresql://%env(DATABASE_USER)%:%env(DATABASE_PASSWORD)%@%env(DATABASE_HOSTNAME)%:5432/%env(DATABASE_DATABASE)%?serverVersion=%env(DATABASE_VERSION)%&charset=utf8'
+framework:
+  session:
+    handler_id: Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler
+  {{- end }}
 doctrine:
   dbal:
     url: 'postgresql://%env(DATABASE_USER)%:%env(DATABASE_PASSWORD)%@%env(DATABASE_HOSTNAME)%:5432/%env(DATABASE_DATABASE)%?serverVersion=%env(DATABASE_VERSION)%&charset=utf8'
+{{- end -}}
+
+
+{{- define "repman.repman.migration.session" -}}
+<?php
+declare(strict_types=1);
+namespace Buddy\Repman\Migrations;
+use Doctrine\DBAL\Schema\Schema;
+use Doctrine\Migrations\AbstractMigration;
+/**
+* Auto-generated Migration: Please modify to your needs!
+*/
+final class Version20210115094614 extends AbstractMigration
+{
+    public function getDescription() : string
+    {
+        return 'add sessions to database';
+    }
+    public function up(Schema $schema) : void
+    {
+        $this->addSql('CREATE TABLE sessions (sess_id VARCHAR(128) NOT NULL PRIMARY KEY,sess_data BYTEA NOT NULL,sess_lifetime INTEGER NOT NULL, sess_time INTEGER NOT NULL);');
+    }
+    public function down(Schema $schema) : void
+    {
+        // this down() migration is auto-generated, please modify it to your needs
+    }
+}
 {{- end -}}
 
 {{- define "repman.repman.config.secrets" -}}
@@ -30,6 +65,7 @@ APP_SECRET: {{ $secret }}
 
 {{- define "repman.repman.config.phpConfig" -}}
 {{- if .Values.redis.enabled -}}
+session.save_handler="redis"
 session.save_path=tcp://{{ include "common.names.releasename" . }}-redis:6379
 {{- end -}}
 {{- range $name, $value := .Values.phpConfig }}

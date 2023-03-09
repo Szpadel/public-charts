@@ -69,16 +69,21 @@ additionalControllers:
         volumeMounts:
         - name: public
           mountPath: /mnt/public
+    persistence:
+      database-session:
+        enabled: false
   upgrade:
     enabled: false
     type: job
     annotations:
-      "helm.sh/hook": pre-upgrade
       "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
     restartPolicy: OnFailure
     command: *install_command
     initContainers:
       copy-public: *copyPublic
+    persistence:
+      database-session:
+        enabled: false
   create-admin:
     enabled: false
     type: job
@@ -263,6 +268,12 @@ persistence:
     mountPath: /usr/local/etc/php/conf.d/php-overrides.ini
     name: '{{ include "common.names.fullname" . }}-files'
     subPath: php-overrides.ini
+  database-session:
+    enabled: false
+    type: configMap
+    mountPath: /app/src/Migrations/Version20210115094614.php
+    name: '{{ include "common.names.fullname" . }}-files'
+    subPath: Version20210115094614.php
 
 phpConfig:
   opcache.memory_consumption: 256
@@ -270,7 +281,6 @@ phpConfig:
   opcache.max_accelerated_files: 10000
   opcache.validate_timestamps: 1
   date.timezone: Europe/Warsaw
-  session.save_handler: redis
 autoscaling:
   main:
     enabled: false
@@ -310,8 +320,9 @@ minio:
   persistence:
     size: 50Gi
 
+# Required custom image with redis support
 redis:
-  enabled: true
+  enabled: false
   architecture: standalone
   auth:
     enabled: false

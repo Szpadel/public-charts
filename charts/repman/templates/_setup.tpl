@@ -9,6 +9,9 @@ configmap:
       nginx.conf: {{ include "repman.nginx.config" . | quote }}
       services_prod.yaml: {{ include "repman.repman.config.services" . | quote }}
       php-overrides.ini: {{ include "repman.repman.config.phpConfig" . | quote}}
+      {{- if not .Values.redis.enabled }}
+      Version20210115094614.php: {{ include "repman.repman.migration.session" . | quote }}
+      {{- end }}
 {{- end -}}
 
 {{- define "repman.names.postgresql" -}}
@@ -26,6 +29,12 @@ configmap:
   {{/* Set dynamic values */}}
   {{- $_ := set . "Values" (mergeOverwrite .Values (include "repman.configmap.files" . | fromYaml)) -}}
   {{- $_ := set .Values "secret" (mergeOverwrite .Values.secret (include "repman.repman.config.secrets" . | fromYaml)) -}}
+
+  {{/* Enable database session when redis is not available */}}
+  {{- if not .Values.redis.enabled -}}
+    {{- $_ := set ( index . "Values" "additionalControllers" "install" "persistence" "database-session") "enabled" true -}}
+    {{- $_ := set ( index . "Values" "additionalControllers" "upgrade" "persistence" "database-session") "enabled" true -}}
+  {{- end -}}
 
   {{/* Generate cronjobs */}}
   {{- range .Values.cronJobs -}}
