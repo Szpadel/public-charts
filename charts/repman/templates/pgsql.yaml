@@ -22,3 +22,13 @@ spec:
   volume: {{ toYaml .Values.postgresql.volume | nindent 4}}
   preparedDatabases:
     {{ .Values.postgresql.database }}:
+  additionalVolumes:
+  - name: workaround
+    mountPath: /usr/share/postgresql/{{ .Values.postgresql.version }}/postgresql.conf.sample
+    subPath: postgresql.conf.sample
+    targetContainers:
+    - postgres
+    volumeSource:
+      configMap:
+        name: '{{ include "common.names.fullname" . }}-postgresql'
+---

@@ -194,6 +194,10 @@ configmap:
   files:
     enabled: true
     data: {} # Data is set from _setup.tpl
+  postgresql: # Workaround for pgsql crashing when hugepages are enabled on host
+    enabled: true
+    data:
+      postgresql.conf.sample: huge_pages = off
 
 service:
   main:
@@ -282,9 +286,7 @@ postgresql:
       memory: 1Gi
   volume:
     size: 10Gi
-  parameters:
-    huge_pages: "off"
-
+  parameters: {}
 minio:
   enabled: true
   # bultiple buckets not suported!
