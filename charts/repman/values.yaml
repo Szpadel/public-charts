@@ -161,6 +161,7 @@ env:
         name: *pgsqlSecretName
         key: password
   DATABASE_DATABASE: "{{ .Values.postgresql.database }}"
+  DATABASE_VERSION: "{{ .Values.postgresql.version }}"
 
   STORAGE_AWS_BUCKET: "{{ .Values.minio.defaultBuckets }}"
   STORAGE_AWS_REGION: "us-east-1"
