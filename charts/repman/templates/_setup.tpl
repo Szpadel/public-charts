@@ -7,7 +7,7 @@ configmap:
   files:
     data:
       nginx.conf: {{ include "repman.nginx.config" . | quote }}
-      services_prod_yaml: {{ include "repman.repman.config.services" . | quote }}
+      services_prod.yaml: {{ include "repman.repman.config.services" . | quote }}
       php-overrides.ini: {{ include "repman.repman.config.phpConfig" . | quote}}
 {{- end -}}
 
