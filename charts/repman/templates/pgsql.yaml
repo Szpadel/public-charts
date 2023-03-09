@@ -14,6 +14,7 @@ spec:
   numberOfInstances: {{ .Values.postgresql.instances }}
   postgresql:
     version: {{ .Values.postgresql.version | toString | quote }}
+    parameters: {{ toYaml .Values.postgresql.parameters | nindent 6 }}
   resources: {{ toYaml .Values.postgresql.resources | nindent 4 }}
   teamId: {{ .Values.postgresql.team }}
   users:
