@@ -6,6 +6,7 @@
 parameters:
   aws_s3_region: '%env(STORAGE_AWS_REGION)%'
   aws_s3_default_endpoint: 'https://s3.%aws_s3_region%.amazonaws.com'
+  "%env(DATABASE_URL)%": postgresql://%env(DATABASE_USER)%:%env(DATABASE_PASSWORD)%@%env(DATABASE_HOSTNAME)%:5432/%env(DATABASE_DATABASE)%?serverVersion=%env(DATABASE_VERSION)%&charset=utf8%
 services:
   Aws\S3\S3Client:
     lazy: true
@@ -17,6 +18,9 @@ services:
       credentials:
         key: '%env(STORAGE_AWS_KEY)%'
         secret: '%env(STORAGE_AWS_SECRET)%'
+doctrine:
+  dbal:
+    url: 'postgresql://%env(DATABASE_USER)%:%env(DATABASE_PASSWORD)%@%env(DATABASE_HOSTNAME)%:5432/%env(DATABASE_DATABASE)%?serverVersion=%env(DATABASE_VERSION)%&charset=utf8'
 {{- end -}}
 
 {{- define "repman.repman.config.secrets" -}}
