@@ -3,13 +3,13 @@ entries:
   docker-registry-pull-cache:
   - apiVersion: v2
     appVersion: 2.8.1
-    created: "2023-04-01T22:46:11.101186607+02:00"
+    created: "2023-04-01T23:10:53.447547578+02:00"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
       version: 0.2.5
     description: Docker registry set as pull through cache
-    digest: 655dba8611a45f04d521e2947c56f1794a3abab5f6bd6a1b6cdfab36d66b74c0
+    digest: 5dac2faa2838852be28a4ebfb216276f7e6ed4dc9d24f5678a9a95ff93e78c19
     maintainers:
     - email: piotrekrogowski@gmail.com
       name: Szpadel
@@ -19,12 +19,12 @@ entries:
     - https://github.com/Szpadel/public-charts/tree/master/containers/cleanup-registry-cache
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/docker-registry-pull-cache-0.1.0.tgz
+    - https://szpadel.github.io/public-charts/releases/docker-registry-pull-cache-0.1.0.tgz
     version: 0.1.0
   headscale:
   - apiVersion: v2
     appVersion: 0.18.0
-    created: "2023-04-01T22:46:11.110981447+02:00"
+    created: "2023-04-01T23:10:53.457429151+02:00"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -37,11 +37,11 @@ entries:
     - https://github.com/juanfont/headscale
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/headscale-0.3.0.tgz
+    - https://szpadel.github.io/public-charts/releases/headscale-0.3.0.tgz
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.17.1
-    created: "2023-04-01T22:46:11.108821704+02:00"
+    created: "2023-04-01T23:10:53.455290797+02:00"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -54,11 +54,11 @@ entries:
     - https://github.com/juanfont/headscale
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/headscale-0.2.0.tgz
+    - https://szpadel.github.io/public-charts/releases/headscale-0.2.0.tgz
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.16.4
-    created: "2023-04-01T22:46:11.106525001+02:00"
+    created: "2023-04-01T23:10:53.452877423+02:00"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -71,11 +71,11 @@ entries:
     - https://github.com/juanfont/headscale
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/headscale-0.1.4.tgz
+    - https://szpadel.github.io/public-charts/releases/headscale-0.1.4.tgz
     version: 0.1.4
   - apiVersion: v2
     appVersion: 0.16.2
-    created: "2023-04-01T22:46:11.103684672+02:00"
+    created: "2023-04-01T23:10:53.45021455+02:00"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -88,12 +88,12 @@ entries:
     - https://github.com/juanfont/headscale
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/headscale-0.1.3.tgz
+    - https://szpadel.github.io/public-charts/releases/headscale-0.1.3.tgz
     version: 0.1.3
   repman:
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2023-04-01T22:46:11.26992874+02:00"
+    created: "2023-04-01T23:10:53.590574798+02:00"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -118,11 +118,11 @@ entries:
     - https://github.com/repman-io/repman
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/repman-3.1.2.tgz
+    - https://szpadel.github.io/public-charts/releases/repman-3.1.2.tgz
     version: 3.1.2
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2023-04-01T22:46:11.253600899+02:00"
+    created: "2023-04-01T23:10:53.582327311+02:00"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -147,11 +147,11 @@ entries:
     - https://github.com/repman-io/repman
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/repman-3.1.1.tgz
+    - https://szpadel.github.io/public-charts/releases/repman-3.1.1.tgz
     version: 3.1.1
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2023-04-01T22:46:11.241174625+02:00"
+    created: "2023-04-01T23:10:53.573743781+02:00"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -176,11 +176,11 @@ entries:
     - https://github.com/repman-io/repman
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/repman-3.1.0.tgz
+    - https://szpadel.github.io/public-charts/releases/repman-3.1.0.tgz
     version: 3.1.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2023-04-01T22:46:11.23165392+02:00"
+    created: "2023-04-01T23:10:53.564674446+02:00"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -205,11 +205,11 @@ entries:
     - https://github.com/repman-io/repman
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/repman-3.0.6.tgz
+    - https://szpadel.github.io/public-charts/releases/repman-3.0.6.tgz
     version: 3.0.6
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2023-04-01T22:46:11.220842764+02:00"
+    created: "2023-04-01T23:10:53.555676235+02:00"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -234,11 +234,11 @@ entries:
     - https://github.com/repman-io/repman
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/repman-3.0.5.tgz
+    - https://szpadel.github.io/public-charts/releases/repman-3.0.5.tgz
     version: 3.0.5
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2023-04-01T22:46:11.208071912+02:00"
+    created: "2023-04-01T23:10:53.546991641+02:00"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -263,11 +263,11 @@ entries:
     - https://github.com/repman-io/repman
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/repman-3.0.4.tgz
+    - https://szpadel.github.io/public-charts/releases/repman-3.0.4.tgz
     version: 3.0.4
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2023-04-01T22:46:11.196573256+02:00"
+    created: "2023-04-01T23:10:53.536301542+02:00"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -292,11 +292,11 @@ entries:
     - https://github.com/repman-io/repman
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/repman-3.0.3.tgz
+    - https://szpadel.github.io/public-charts/releases/repman-3.0.3.tgz
     version: 3.0.3
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2023-04-01T22:46:11.187484164+02:00"
+    created: "2023-04-01T23:10:53.527065806+02:00"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -321,11 +321,11 @@ entries:
     - https://github.com/repman-io/repman
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/repman-3.0.2.tgz
+    - https://szpadel.github.io/public-charts/releases/repman-3.0.2.tgz
     version: 3.0.2
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2023-04-01T22:46:11.177693339+02:00"
+    created: "2023-04-01T23:10:53.518087226+02:00"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -350,11 +350,11 @@ entries:
     - https://github.com/repman-io/repman
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/repman-3.0.1.tgz
+    - https://szpadel.github.io/public-charts/releases/repman-3.0.1.tgz
     version: 3.0.1
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2023-04-01T22:46:11.167255971+02:00"
+    created: "2023-04-01T23:10:53.509549261+02:00"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -379,11 +379,11 @@ entries:
     - https://github.com/repman-io/repman
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/repman-3.0.0.tgz
+    - https://szpadel.github.io/public-charts/releases/repman-3.0.0.tgz
     version: 3.0.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2023-04-01T22:46:11.157061929+02:00"
+    created: "2023-04-01T23:10:53.500836975+02:00"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -405,11 +405,11 @@ entries:
     - https://github.com/repman-io/repman
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/repman-2.1.0.tgz
+    - https://szpadel.github.io/public-charts/releases/repman-2.1.0.tgz
     version: 2.1.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2023-04-01T22:46:11.152087746+02:00"
+    created: "2023-04-01T23:10:53.496257844+02:00"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -431,11 +431,11 @@ entries:
     - https://github.com/repman-io/repman
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/repman-2.0.0.tgz
+    - https://szpadel.github.io/public-charts/releases/repman-2.0.0.tgz
     version: 2.0.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2023-04-01T22:46:11.146720348+02:00"
+    created: "2023-04-01T23:10:53.49188141+02:00"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -456,11 +456,11 @@ entries:
     - https://github.com/repman-io/repman
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/repman-1.2.2.tgz
+    - https://szpadel.github.io/public-charts/releases/repman-1.2.2.tgz
     version: 1.2.2
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2023-04-01T22:46:11.141952755+02:00"
+    created: "2023-04-01T23:10:53.487368182+02:00"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -481,11 +481,11 @@ entries:
     - https://github.com/repman-io/repman
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/repman-1.2.1.tgz
+    - https://szpadel.github.io/public-charts/releases/repman-1.2.1.tgz
     version: 1.2.1
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2023-04-01T22:46:11.136853921+02:00"
+    created: "2023-04-01T23:10:53.483216258+02:00"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -506,11 +506,11 @@ entries:
     - https://github.com/repman-io/repman
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/repman-1.2.0.tgz
+    - https://szpadel.github.io/public-charts/releases/repman-1.2.0.tgz
     version: 1.2.0
   - apiVersion: v2
     appVersion: 1.2.2
-    created: "2023-04-01T22:46:11.132099867+02:00"
+    created: "2023-04-01T23:10:53.478390755+02:00"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -531,11 +531,11 @@ entries:
     - https://github.com/repman-io/repman
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/repman-1.1.3.tgz
+    - https://szpadel.github.io/public-charts/releases/repman-1.1.3.tgz
     version: 1.1.3
   - apiVersion: v2
     appVersion: 1.2.1
-    created: "2023-04-01T22:46:11.127859883+02:00"
+    created: "2023-04-01T23:10:53.474417251+02:00"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -556,11 +556,11 @@ entries:
     - https://github.com/repman-io/repman
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/repman-1.1.2.tgz
+    - https://szpadel.github.io/public-charts/releases/repman-1.1.2.tgz
     version: 1.1.2
   - apiVersion: v2
     appVersion: 1.2.0
-    created: "2023-04-01T22:46:11.124270788+02:00"
+    created: "2023-04-01T23:10:53.47091922+02:00"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -581,11 +581,11 @@ entries:
     - https://github.com/repman-io/repman
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/repman-1.1.1.tgz
+    - https://szpadel.github.io/public-charts/releases/repman-1.1.1.tgz
     version: 1.1.1
   - apiVersion: v2
     appVersion: 1.2.0-dev
-    created: "2023-04-01T22:46:11.119663733+02:00"
+    created: "2023-04-01T23:10:53.466710046+02:00"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -606,11 +606,11 @@ entries:
     - https://github.com/repman-io/repman
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/repman-1.1.0.tgz
+    - https://szpadel.github.io/public-charts/releases/repman-1.1.0.tgz
     version: 1.1.0
   - apiVersion: v2
     appVersion: 1.2.0-dev
-    created: "2023-04-01T22:46:11.115444386+02:00"
+    created: "2023-04-01T23:10:53.462475375+02:00"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -631,12 +631,12 @@ entries:
     - https://github.com/repman-io/repman
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/repman-1.0.0.tgz
+    - https://szpadel.github.io/public-charts/releases/repman-1.0.0.tgz
     version: 1.0.0
   seafile:
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2023-04-01T22:46:11.320497888+02:00"
+    created: "2023-04-01T23:10:53.614589028+02:00"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -660,11 +660,11 @@ entries:
     - https://github.com/haiwen/seafile
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/seafile-0.1.1.tgz
+    - https://szpadel.github.io/public-charts/releases/seafile-0.1.1.tgz
     version: 0.1.1
   - apiVersion: v2
     appVersion: 9.0.9
-    created: "2023-04-01T22:46:11.299073589+02:00"
+    created: "2023-04-01T23:10:53.602171039+02:00"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -688,6 +688,6 @@ entries:
     - https://github.com/haiwen/seafile
     type: application
     urls:
-    - https://szpadel.github.io/library-charts/releases/seafile-0.1.0.tgz
+    - https://szpadel.github.io/public-charts/releases/seafile-0.1.0.tgz
     version: 0.1.0
-generated: "2023-04-01T22:46:11.099019008+02:00"
+generated: "2023-04-01T23:10:53.445229688+02:00"
