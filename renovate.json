@@ -1,0 +1,93 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    "config:base",
+    ":enablePreCommit",
+    ":automergeMinor",
+    ":prConcurrentLimit10",
+    ":separateMultipleMajorReleases",
+    ":enablePreCommit",
+    ":prHourlyLimitNone",
+    ":pinVersions"
+  ],
+  "dockerfile": {
+    "enabled": true,
+    "fileMatch": [
+      "^containers/[^/]+/Dockerfile$"
+    ]
+  },
+  "docker": {
+    "versioning": "docker"
+  },
+  "major": {
+    "dependencyDashboardApproval": true
+  },
+  "prCreation": "not-pending",
+  "rebaseWhen": "behind-base-branch",
+  "github-actions": {
+    "fileMatch": [
+      "^(workflow-templates|\\.github\\/workflows)\\/[^/]+\\.ya?ml$",
+      "(^|\\/)action\\.ya?ml$"
+    ]
+  },
+  "regexManagers": [
+    {
+      "fileMatch": [
+        "^containers/[^/]+/VERSION$"
+      ],
+      "matchStrings": [
+        "^(?<currentValue>.*?)$"
+      ],
+      "depNameTemplate": "containers/{{parentDir}}",
+      "datasourceTemplate": "docker"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchManagers": [
+        "helm-requirements",
+        "helm-values"
+      ],
+      "matchUpdateTypes": [
+        "pinDigest",
+        "pin",
+        "patch",
+        "digest"
+      ],
+      "postUpgradeTasks": {
+        "commands": [
+          "docker run --rm -w \"$PWD\" -v\"$PWD:$PWD\" alpine sh -c 'apk add --no-cache bash && ./scripts/release.sh --alpine-install-deps --chown 1000:1000 --bump-patch \"$(basename '{{parentDir}}')\"'"
+        ],
+        "fileFilters": [
+          "**/Chart.yaml",
+          "releases/*",
+          "index.yaml"
+        ],
+        "executionMode": "branch"
+      },
+      "groupName": "helm-patch"
+    },
+    {
+      "matchManagers": [
+        "helm-requirements",
+        "helm-values"
+      ],
+      "matchUpdateTypes": [
+        "minor"
+      ],
+      "postUpgradeTasks": {
+        "commands": [
+          "docker run --rm -w \"$PWD\" -v\"$PWD:$PWD\" alpine sh -c 'apk add --no-cache bash && ./scripts/release.sh --alpine-install-deps --chown 1000:1000 --bump-minor \"$(basename '{{parentDir}}')\"'"
+        ],
+        "fileFilters": [
+          "**/Chart.yaml",
+          "releases/*",
+          "index.yaml"
+        ],
+        "executionMode": "branch"
+      },
+      "groupName": "helm-minor"
+    }
+  ]
+}
