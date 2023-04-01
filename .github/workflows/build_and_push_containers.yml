@@ -24,9 +24,9 @@ jobs:
       - name: Set Matrix
         id: set-matrix
         run: |
-          DIFF=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} -- containers ||
-            git diff --name-only HEAD~1 ${{ github.sha }} -- containers)
-          containers=$(echo "$DIFF" | awk -F/ '{print $2}' | sort -u)
+          DIFF=$(git diff --name-status ${{ github.event.before }} ${{ github.sha }} -- containers ||
+            git diff --name-status HEAD~1 ${{ github.sha }} -- containers)
+          containers=$(echo "$DIFF" | grep -v '^D' | awk -F/ '{print $2}' | sort -u)
           matrix=$(echo $containers | tr ' ' '\n' | jq -R . | jq -rs '{"container_path": .} | @json')
           echo "matrix=$matrix" >> $GITHUB_OUTPUT
 
