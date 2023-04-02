@@ -38,5 +38,5 @@ dependencies:
     condition: memcached.enabled
   - name: elasticsearch
     repository: https://charts.bitnami.com/bitnami
-    version: 19.5.2
+    version: 19.6.0
     condition: elasticsearch.enabled
