@@ -26,7 +26,10 @@ jobs:
         run: |
           DIFF=$(git diff --name-status ${{ github.event.before }} ${{ github.sha }} -- containers ||
             git diff --name-status HEAD~1 ${{ github.sha }} -- containers)
-          containers=$(echo "$DIFF" | grep -v '^D' | awk -F/ '{print $2}' | sort -u)
+          # grep -v '^D' # do not rebuild when image is deleted
+          # awk '{if ($3 != "") print $3; else print $2}' # Handle cases files where renamed
+          # awk -F/ '{print $2}' # Extract image name from path
+          containers=$(echo "$DIFF" | grep -v '^D' | awk '{if ($3 != "") print $3; else print $2}' | awk -F/ '{print $2}' | sort -u)
           matrix=$(echo $containers | tr ' ' '\n' | jq -R . | jq -rs '{"container_path": .} | @json')
           echo "matrix=$matrix" >> $GITHUB_OUTPUT
 

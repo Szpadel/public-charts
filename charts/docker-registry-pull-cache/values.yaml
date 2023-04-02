@@ -4,24 +4,7 @@ image:
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
-
-additionalControllers:
-  cleanup:
-    enabled: true
-    type: cronjob
-    schedule: "0 0 * * *"
-    env:
-      REGISTRY_URL: 'http://{{ include "common.names.fullname" . }}:5000'
-    image:
-      repository: ghcr.io/szpadel/cleanup-registry-cache
-      pullPolicy: IfNotPresent
-      tag: 0.1.0
-    persistence:
-      registry:
-        enabled: false
-
 env:
-  CLEANUP_OLDER_THAN_DAYS: 30
   REGISTRY_PROXY_REMOTEURL: https://registry-1.docker.io
   REGISTRY_STORAGE_DELETE_ENABLED: "true"
 
