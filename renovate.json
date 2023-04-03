@@ -88,7 +88,8 @@
         ],
         "fileFilters": [
           "containers/{{parentDir}}/VERSION"
-        ]
+        ],
+        "executionMode": "branch"
       }
     }
   ]
