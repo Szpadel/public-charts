@@ -9,7 +9,8 @@
     ":separateMultipleMajorReleases",
     ":enablePreCommit",
     ":prHourlyLimitNone",
-    ":pinVersions"
+    ":pinVersions",
+    "docker:pinDigests"
   ],
   "dockerfile": {
     "enabled": true,
