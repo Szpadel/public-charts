@@ -32,18 +32,6 @@
       "(^|\\/)action\\.ya?ml$"
     ]
   },
-  "regexManagers": [
-    {
-      "fileMatch": [
-        "^containers/[^/]+/VERSION$"
-      ],
-      "matchStrings": [
-        "^(?<currentValue>.*?)$"
-      ],
-      "depNameTemplate": "containers/{{parentDir}}",
-      "datasourceTemplate": "docker"
-    }
-  ],
   "packageRules": [
     {
       "matchManagers": [
@@ -89,6 +77,19 @@
         "executionMode": "branch"
       },
       "groupName": "helm-minor"
+    },
+    {
+      "matchPaths": [
+        "^containers/[^/]+/Dockerfile$"
+      ],
+      "postUpgradeTasks": {
+        "commands": [
+          "IFS='.' read -ra verArray <<< \"$(cat containers/{{parentDir}}/VERSION)\"; newVer=\"${verArray[0]}.${verArray[1]}.$(( verArray[2] + 1 ))\"; echo \"$newVer\" > containers/{{parentDir}}/VERSION"
+        ],
+        "fileFilters": [
+          "containers/{{parentDir}}/VERSION"
+        ]
+      }
     }
   ]
 }
