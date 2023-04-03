@@ -80,7 +80,7 @@
     },
     {
       "matchPaths": [
-        "^containers/[^/]+/Dockerfile$"
+        "containers/*/Dockerfile"
       ],
       "postUpgradeTasks": {
         "commands": [
