@@ -12,7 +12,7 @@ dependencies:
     condition: minio.enabled
   - name: common
     repository: https://szpadel.github.io/library-charts
-    version: 0.6.1
+    version: 0.6.2
   - name: redis
     version: 17.9.4
     repository: https://charts.bitnami.com/bitnami
