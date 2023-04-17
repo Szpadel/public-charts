@@ -14,7 +14,7 @@ dependencies:
     repository: https://szpadel.github.io/library-charts
     version: 0.6.2
   - name: redis
-    version: 17.9.4
+    version: 17.9.5
     repository: https://charts.bitnami.com/bitnami
     condition: redis.enabled
 maintainers:
