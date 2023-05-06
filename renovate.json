@@ -5,6 +5,8 @@
     "config:base",
     ":enablePreCommit",
     ":automergeMinor",
+    ":automergePatch",
+    ":automergeDigest",
     ":prConcurrentLimit10",
     ":separateMultipleMajorReleases",
     ":enablePreCommit",
