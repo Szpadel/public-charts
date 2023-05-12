@@ -55,6 +55,7 @@ service:
         enabled: false
         port: 50443
   ui:
+    enabled: true
     selectorLabels:
       role: ui
     ports:
