@@ -1,23 +1,49 @@
 controller:
   type: statefulset
-
-image:
-  repository: headscale/headscale
-  tag:
-
-env:
-  TZ: UTC
+  command: [ 'headscale', 'serve' ]
 
 probes:
   liveness:
-    enabled: true
+    enabled: false # Disable for now as handling for multiple probes need to be improved in common
     spec:
       initialDelaySeconds: 30
       timeoutSeconds: 5
       periodSeconds: 15
 
+image:
+  repository: headscale/headscale
+  tag:
+
+additionalControllers:
+  ui:
+    enabled: true
+    image:
+      repository: ghcr.io/gurucomputing/headscale-ui
+      tag: 2023.01.30-beta-1
+    type: deployment
+    labels:
+      role: ui
+    selectorLabels:
+      role: ui
+    persistence:
+      data:
+        enabled: false
+    probes:
+      liveness:
+        enabled: true
+        spec:
+          initialDelaySeconds: 30
+          timeoutSeconds: 5
+          periodSeconds: 15
+
+
+env:
+  TZ: UTC
+
 service:
   main:
+    selectorLabels:
+      role: primary
     ports:
       http:
         port: 8080
@@ -28,15 +54,23 @@ service:
         protocol: TCP
         enabled: false
         port: 50443
+  ui:
+    selectorLabels:
+      role: ui
+    ports:
+      http:
+        enabled: true
+        protocol: TCP
+        port: 80
   derp:
+    selectorLabels:
+      role: primary
     enabled: false
     ports:
       stun:
         enabled: true
         port: 3478
         protocol: UDP
-
-args: ["headscale", "serve"]
 
 ingress:
   main:
