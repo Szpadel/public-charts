@@ -28,13 +28,6 @@ additionalControllers:
     persistence:
       data:
         enabled: false
-    probes:
-      liveness:
-        enabled: true
-        spec:
-          initialDelaySeconds: 30
-          timeoutSeconds: 5
-          periodSeconds: 15
 
 
 env:
