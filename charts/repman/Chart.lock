@@ -1,12 +1,12 @@
 dependencies:
 - name: minio
   repository: https://charts.bitnami.com/bitnami
-  version: 12.4.4
+  version: 12.6.0
 - name: common
   repository: https://szpadel.github.io/library-charts
   version: 0.7.0
 - name: redis
   repository: https://charts.bitnami.com/bitnami
   version: 17.10.3
-digest: sha256:4ef7b3b73b301385393662caa8c06909a55f92cfe19ab1bc349a1f84bdc607d2
-generated: "2023-05-12T12:06:12.660943692Z"
+digest: sha256:90b3306eebf657bc3562891be0c0cf4d7d57c03101a4c2c5d8ec65b15c39f08a
+generated: "2023-05-15T15:51:12.053256414Z"
