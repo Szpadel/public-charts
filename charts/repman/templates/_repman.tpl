@@ -60,7 +60,7 @@ final class Version20210115094614 extends AbstractMigration
 {{- define "repman.repman.config.secrets" -}}
 {{- $existingSecret := lookup "v1" "Secret" .Release.Namespace (include "common.names.fullname" .) | default dict -}}
 {{- $secret := dig "data" "APP_SECRET" (randAlphaNum 32 | b64enc) $existingSecret }}
-APP_SECRET: {{ $secret }}
+APP_SECRET: {{ $secret | b64dec }}
 {{- end -}}
 
 {{- define "repman.repman.config.phpConfig" -}}
