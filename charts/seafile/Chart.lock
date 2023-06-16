@@ -7,9 +7,9 @@ dependencies:
   version: 11.5.7
 - name: memcached
   repository: https://charts.bitnami.com/bitnami
-  version: 6.5.2
+  version: 6.5.3
 - name: elasticsearch
   repository: https://charts.bitnami.com/bitnami
   version: 19.10.2
-digest: sha256:ab451c089179dfc60222f2eec475f1b0fddeb0a933064cdb52f624cd96d3f5eb
-generated: "2023-06-13T11:26:15.411964215Z"
+digest: sha256:9b45f248f44a0c24b5e66bbb21078038a4079a35352f6b5f7f916b496b88b13d
+generated: "2023-06-16T06:34:18.815083965Z"
