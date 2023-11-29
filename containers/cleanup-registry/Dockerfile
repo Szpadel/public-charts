@@ -1,4 +1,4 @@
-FROM python:3.12-alpine@sha256:f1d0d03700fb2d4480e89fb807e7346c14b88952f7bd58d56de54a24817cc2e8
+FROM python:3.12-alpine@sha256:c5bbde5ada8f427a1f2e2fb41f08077bfb4f1c779e82ab7e603a145275bec840
 RUN pip install requests
 ADD delete_unused_images.py /usr/local/bin/
 ENTRYPOINT [ "/usr/local/bin/delete_unused_images.py" ]
