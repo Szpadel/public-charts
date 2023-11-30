@@ -1,4 +1,4 @@
-FROM alpine@sha256:3a244917cd8d31893d88232d2201755fc9c884fde57a47d148f77edbcc8ad2a6
+FROM alpine@sha256:69e0a8b6d2048be90290c992957a3cde2e87e955e5bb9c27d228c78c46c7840f
 RUN apk add --no-cache \
         bash jq python3 py3-pip curl helm git coreutils \
     && pip install yq
