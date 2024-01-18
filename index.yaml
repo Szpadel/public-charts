@@ -3,7 +3,7 @@ entries:
   docker-registry-pull-cache:
   - apiVersion: v2
     appVersion: 2.8.1
-    created: "2024-01-18T03:46:33.21053171Z"
+    created: "2024-01-18T23:01:48.278672978Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -23,7 +23,7 @@ entries:
     version: 0.11.0
   - apiVersion: v2
     appVersion: 2.8.1
-    created: "2024-01-18T03:46:33.207945624Z"
+    created: "2024-01-18T23:01:48.275669652Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -43,7 +43,7 @@ entries:
     version: 0.10.0
   - apiVersion: v2
     appVersion: 2.8.1
-    created: "2024-01-18T03:46:33.244797927Z"
+    created: "2024-01-18T23:01:48.31521439Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -63,7 +63,7 @@ entries:
     version: 0.9.2
   - apiVersion: v2
     appVersion: 2.8.1
-    created: "2024-01-18T03:46:33.241462635Z"
+    created: "2024-01-18T23:01:48.312420765Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -83,7 +83,7 @@ entries:
     version: 0.9.1
   - apiVersion: v2
     appVersion: 2.8.1
-    created: "2024-01-18T03:46:33.238785785Z"
+    created: "2024-01-18T23:01:48.309139534Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -103,7 +103,7 @@ entries:
     version: 0.9.0
   - apiVersion: v2
     appVersion: 2.8.1
-    created: "2024-01-18T03:46:33.236040172Z"
+    created: "2024-01-18T23:01:48.306362905Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -123,7 +123,7 @@ entries:
     version: 0.8.0
   - apiVersion: v2
     appVersion: 2.8.1
-    created: "2024-01-18T03:46:33.232822903Z"
+    created: "2024-01-18T23:01:48.303607924Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -143,7 +143,7 @@ entries:
     version: 0.7.0
   - apiVersion: v2
     appVersion: 2.8.1
-    created: "2024-01-18T03:46:33.230207486Z"
+    created: "2024-01-18T23:01:48.300741488Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -163,7 +163,7 @@ entries:
     version: 0.6.1
   - apiVersion: v2
     appVersion: 2.8.1
-    created: "2024-01-18T03:46:33.227544626Z"
+    created: "2024-01-18T23:01:48.297285628Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -183,7 +183,7 @@ entries:
     version: 0.6.0
   - apiVersion: v2
     appVersion: 2.8.1
-    created: "2024-01-18T03:46:33.224906741Z"
+    created: "2024-01-18T23:01:48.294356674Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -203,7 +203,7 @@ entries:
     version: 0.5.1
   - apiVersion: v2
     appVersion: 2.8.1
-    created: "2024-01-18T03:46:33.221704303Z"
+    created: "2024-01-18T23:01:48.291172336Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -223,7 +223,7 @@ entries:
     version: 0.5.0
   - apiVersion: v2
     appVersion: 2.8.1
-    created: "2024-01-18T03:46:33.219080543Z"
+    created: "2024-01-18T23:01:48.288363253Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -243,7 +243,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 2.8.1
-    created: "2024-01-18T03:46:33.216253225Z"
+    created: "2024-01-18T23:01:48.284273137Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -263,7 +263,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 2.8.1
-    created: "2024-01-18T03:46:33.213588097Z"
+    created: "2024-01-18T23:01:48.281447017Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -283,7 +283,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 2.8.1
-    created: "2024-01-18T03:46:33.205278484Z"
+    created: "2024-01-18T23:01:48.272177657Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -304,7 +304,7 @@ entries:
   headscale:
   - apiVersion: v2
     appVersion: 0.22.3
-    created: "2024-01-18T03:46:33.281953203Z"
+    created: "2024-01-18T23:01:48.352997338Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -321,7 +321,7 @@ entries:
     version: 0.15.0
   - apiVersion: v2
     appVersion: 0.22.3
-    created: "2024-01-18T03:46:33.278190857Z"
+    created: "2024-01-18T23:01:48.349216525Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -338,7 +338,7 @@ entries:
     version: 0.14.0
   - apiVersion: v2
     appVersion: 0.22.3
-    created: "2024-01-18T03:46:33.275057224Z"
+    created: "2024-01-18T23:01:48.345886644Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -355,7 +355,7 @@ entries:
     version: 0.13.2
   - apiVersion: v2
     appVersion: 0.22.3
-    created: "2024-01-18T03:46:33.271291326Z"
+    created: "2024-01-18T23:01:48.342702221Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -372,7 +372,7 @@ entries:
     version: 0.13.1
   - apiVersion: v2
     appVersion: 0.22.3
-    created: "2024-01-18T03:46:33.267919803Z"
+    created: "2024-01-18T23:01:48.339553646Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -389,7 +389,7 @@ entries:
     version: 0.13.0
   - apiVersion: v2
     appVersion: 0.22.3
-    created: "2024-01-18T03:46:33.264143183Z"
+    created: "2024-01-18T23:01:48.335870697Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -406,7 +406,7 @@ entries:
     version: 0.12.0
   - apiVersion: v2
     appVersion: 0.22.3
-    created: "2024-01-18T03:46:33.261018299Z"
+    created: "2024-01-18T23:01:48.332629069Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -423,7 +423,7 @@ entries:
     version: 0.11.0
   - apiVersion: v2
     appVersion: 0.22.3
-    created: "2024-01-18T03:46:33.257904196Z"
+    created: "2024-01-18T23:01:48.329191671Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -440,7 +440,7 @@ entries:
     version: 0.10.1
   - apiVersion: v2
     appVersion: 0.22.3
-    created: "2024-01-18T03:46:33.254008241Z"
+    created: "2024-01-18T23:01:48.325760703Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -457,7 +457,7 @@ entries:
     version: 0.10.0
   - apiVersion: v2
     appVersion: 0.22.3
-    created: "2024-01-18T03:46:33.322458959Z"
+    created: "2024-01-18T23:01:48.393633194Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -474,7 +474,7 @@ entries:
     version: 0.9.1
   - apiVersion: v2
     appVersion: 0.22.3
-    created: "2024-01-18T03:46:33.317921355Z"
+    created: "2024-01-18T23:01:48.389735133Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -491,7 +491,7 @@ entries:
     version: 0.9.0
   - apiVersion: v2
     appVersion: 0.22.3
-    created: "2024-01-18T03:46:33.314816802Z"
+    created: "2024-01-18T23:01:48.386418042Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -508,7 +508,7 @@ entries:
     version: 0.8.0
   - apiVersion: v2
     appVersion: 0.22.3
-    created: "2024-01-18T03:46:33.311676748Z"
+    created: "2024-01-18T23:01:48.383126434Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -525,7 +525,7 @@ entries:
     version: 0.7.0
   - apiVersion: v2
     appVersion: 0.22.3
-    created: "2024-01-18T03:46:33.308571463Z"
+    created: "2024-01-18T23:01:48.379963616Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -542,7 +542,7 @@ entries:
     version: 0.6.1
   - apiVersion: v2
     appVersion: 0.22.3
-    created: "2024-01-18T03:46:33.304816612Z"
+    created: "2024-01-18T23:01:48.376053356Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -559,7 +559,7 @@ entries:
     version: 0.6.0
   - apiVersion: v2
     appVersion: 0.22.3
-    created: "2024-01-18T03:46:33.301679679Z"
+    created: "2024-01-18T23:01:48.37267125Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -576,7 +576,7 @@ entries:
     version: 0.5.2
   - apiVersion: v2
     appVersion: 0.22.2
-    created: "2024-01-18T03:46:33.298665581Z"
+    created: "2024-01-18T23:01:48.369251973Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -593,7 +593,7 @@ entries:
     version: 0.5.1
   - apiVersion: v2
     appVersion: 0.22.2
-    created: "2024-01-18T03:46:33.29549024Z"
+    created: "2024-01-18T23:01:48.36609607Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -610,7 +610,7 @@ entries:
     version: 0.5.0
   - apiVersion: v2
     appVersion: 0.23.0
-    created: "2024-01-18T03:46:33.291495979Z"
+    created: "2024-01-18T23:01:48.362358138Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -627,7 +627,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 0.18.0
-    created: "2024-01-18T03:46:33.288398049Z"
+    created: "2024-01-18T23:01:48.359378859Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -644,7 +644,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.17.1
-    created: "2024-01-18T03:46:33.28517106Z"
+    created: "2024-01-18T23:01:48.356197434Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -661,7 +661,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.16.4
-    created: "2024-01-18T03:46:33.250914448Z"
+    created: "2024-01-18T23:01:48.321511879Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -678,7 +678,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 0.16.2
-    created: "2024-01-18T03:46:33.247849469Z"
+    created: "2024-01-18T23:01:48.318288809Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -696,7 +696,36 @@ entries:
   repman:
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.313366853Z"
+    created: "2024-01-18T23:01:49.393385174Z"
+    dependencies:
+    - condition: minio.enabled
+      name: minio
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.13.2
+    - name: common
+      repository: https://szpadel.github.io/library-charts
+      version: 0.15.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 18.7.1
+    description: 'Repman - PHP Repository Manager: packagist proxy and host for private
+      packages'
+    digest: c4ee3ff2082bf7e3bd6d6b274466581a743e7e805729c639d57345146db7aa79
+    maintainers:
+    - email: piotrekrogowski@gmail.com
+      name: Szpadel
+    name: repman
+    sources:
+    - https://github.com/Szpadel/public-charts/tree/master/charts/repman
+    - https://github.com/repman-io/repman
+    type: application
+    urls:
+    - https://szpadel.github.io/public-charts/releases/repman-3.26.1.tgz
+    version: 3.26.1
+  - apiVersion: v2
+    appVersion: 1.4.0
+    created: "2024-01-18T23:01:49.377160689Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -725,7 +754,7 @@ entries:
     version: 3.26.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.299787231Z"
+    created: "2024-01-18T23:01:49.363635362Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -754,7 +783,7 @@ entries:
     version: 3.25.4
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.285368953Z"
+    created: "2024-01-18T23:01:49.349853349Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -783,7 +812,7 @@ entries:
     version: 3.25.3
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.27039219Z"
+    created: "2024-01-18T23:01:49.334755037Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -812,7 +841,7 @@ entries:
     version: 3.25.2
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.255918407Z"
+    created: "2024-01-18T23:01:49.320081285Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -841,7 +870,7 @@ entries:
     version: 3.25.1
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.241620227Z"
+    created: "2024-01-18T23:01:49.30671134Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -870,7 +899,7 @@ entries:
     version: 3.25.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.226812445Z"
+    created: "2024-01-18T23:01:49.292432258Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -899,7 +928,7 @@ entries:
     version: 3.24.1
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.211956403Z"
+    created: "2024-01-18T23:01:49.2768845Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -928,7 +957,7 @@ entries:
     version: 3.24.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.198616808Z"
+    created: "2024-01-18T23:01:49.261799995Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -957,7 +986,7 @@ entries:
     version: 3.23.2
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.184510255Z"
+    created: "2024-01-18T23:01:49.247591134Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -986,7 +1015,7 @@ entries:
     version: 3.23.1
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.170271932Z"
+    created: "2024-01-18T23:01:49.233645708Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1015,7 +1044,7 @@ entries:
     version: 3.23.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.15528062Z"
+    created: "2024-01-18T23:01:49.21928922Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1044,7 +1073,7 @@ entries:
     version: 3.22.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.13994991Z"
+    created: "2024-01-18T23:01:49.205401725Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1073,7 +1102,7 @@ entries:
     version: 3.21.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.125862335Z"
+    created: "2024-01-18T23:01:49.191030203Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1102,7 +1131,7 @@ entries:
     version: 3.20.2
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.111195264Z"
+    created: "2024-01-18T23:01:49.175517352Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1131,7 +1160,7 @@ entries:
     version: 3.20.1
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.097405791Z"
+    created: "2024-01-18T23:01:49.159310898Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1160,7 +1189,7 @@ entries:
     version: 3.20.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.068085588Z"
+    created: "2024-01-18T23:01:49.130826678Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1189,7 +1218,7 @@ entries:
     version: 3.19.3
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.054542201Z"
+    created: "2024-01-18T23:01:49.116354931Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1218,7 +1247,7 @@ entries:
     version: 3.19.2
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.039558849Z"
+    created: "2024-01-18T23:01:49.102362691Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1247,7 +1276,7 @@ entries:
     version: 3.19.1
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.025388238Z"
+    created: "2024-01-18T23:01:49.088486301Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1276,7 +1305,7 @@ entries:
     version: 3.19.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.010237587Z"
+    created: "2024-01-18T23:01:49.073933135Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1305,7 +1334,7 @@ entries:
     version: 3.18.8
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.99696293Z"
+    created: "2024-01-18T23:01:49.058923765Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1334,7 +1363,7 @@ entries:
     version: 3.18.7
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.982603556Z"
+    created: "2024-01-18T23:01:49.046020662Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1363,7 +1392,7 @@ entries:
     version: 3.18.6
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.969497152Z"
+    created: "2024-01-18T23:01:49.031988325Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1392,7 +1421,7 @@ entries:
     version: 3.18.5
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.955304092Z"
+    created: "2024-01-18T23:01:49.018307862Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1421,7 +1450,7 @@ entries:
     version: 3.18.4
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.941590252Z"
+    created: "2024-01-18T23:01:49.004835016Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1450,7 +1479,7 @@ entries:
     version: 3.18.3
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.927697399Z"
+    created: "2024-01-18T23:01:48.990363465Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1479,7 +1508,7 @@ entries:
     version: 3.18.2
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.913305438Z"
+    created: "2024-01-18T23:01:48.977171055Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1508,7 +1537,7 @@ entries:
     version: 3.18.1
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.899641968Z"
+    created: "2024-01-18T23:01:48.961878628Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1537,7 +1566,7 @@ entries:
     version: 3.18.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.884857061Z"
+    created: "2024-01-18T23:01:48.948775757Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1566,7 +1595,7 @@ entries:
     version: 3.17.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.87114122Z"
+    created: "2024-01-18T23:01:48.935027877Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1595,7 +1624,7 @@ entries:
     version: 3.16.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.850381477Z"
+    created: "2024-01-18T23:01:48.920373399Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1624,7 +1653,7 @@ entries:
     version: 3.15.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.835247011Z"
+    created: "2024-01-18T23:01:48.907355166Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1653,7 +1682,7 @@ entries:
     version: 3.14.3
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.821762822Z"
+    created: "2024-01-18T23:01:48.894416962Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1682,7 +1711,7 @@ entries:
     version: 3.14.2
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.808877651Z"
+    created: "2024-01-18T23:01:48.880414399Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1711,7 +1740,7 @@ entries:
     version: 3.14.1
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.794406733Z"
+    created: "2024-01-18T23:01:48.866494164Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1740,7 +1769,7 @@ entries:
     version: 3.14.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.779627654Z"
+    created: "2024-01-18T23:01:48.853188524Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1769,7 +1798,7 @@ entries:
     version: 3.13.4
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.765980936Z"
+    created: "2024-01-18T23:01:48.84042823Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1798,7 +1827,7 @@ entries:
     version: 3.13.3
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.752886668Z"
+    created: "2024-01-18T23:01:48.826652907Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1827,7 +1856,7 @@ entries:
     version: 3.13.2
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.73846108Z"
+    created: "2024-01-18T23:01:48.814251885Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1856,7 +1885,7 @@ entries:
     version: 3.13.1
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.725537623Z"
+    created: "2024-01-18T23:01:48.80031182Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1885,7 +1914,7 @@ entries:
     version: 3.13.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.711309448Z"
+    created: "2024-01-18T23:01:48.787281605Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1914,7 +1943,7 @@ entries:
     version: 3.12.3
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.6986402Z"
+    created: "2024-01-18T23:01:48.773943913Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1943,7 +1972,7 @@ entries:
     version: 3.12.2
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.684573705Z"
+    created: "2024-01-18T23:01:48.75970079Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -1972,7 +2001,7 @@ entries:
     version: 3.12.1
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.671579639Z"
+    created: "2024-01-18T23:01:48.746996914Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2001,7 +2030,7 @@ entries:
     version: 3.12.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.657413715Z"
+    created: "2024-01-18T23:01:48.732601456Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2030,7 +2059,7 @@ entries:
     version: 3.11.5
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.644415971Z"
+    created: "2024-01-18T23:01:48.717942509Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2059,7 +2088,7 @@ entries:
     version: 3.11.4
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.628982481Z"
+    created: "2024-01-18T23:01:48.704732373Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2088,7 +2117,7 @@ entries:
     version: 3.11.3
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.614554491Z"
+    created: "2024-01-18T23:01:48.690573438Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2117,7 +2146,7 @@ entries:
     version: 3.11.2
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.601457653Z"
+    created: "2024-01-18T23:01:48.675425376Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2146,7 +2175,7 @@ entries:
     version: 3.11.1
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.587468871Z"
+    created: "2024-01-18T23:01:48.657520698Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2175,7 +2204,7 @@ entries:
     version: 3.11.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.572816554Z"
+    created: "2024-01-18T23:01:48.639291267Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2204,7 +2233,7 @@ entries:
     version: 3.10.1
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.557772421Z"
+    created: "2024-01-18T23:01:48.625301231Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2233,7 +2262,7 @@ entries:
     version: 3.10.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.492400649Z"
+    created: "2024-01-18T23:01:49.600769503Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2262,7 +2291,7 @@ entries:
     version: 3.9.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.478882139Z"
+    created: "2024-01-18T23:01:49.587607519Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2291,7 +2320,7 @@ entries:
     version: 3.8.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.464388053Z"
+    created: "2024-01-18T23:01:49.573391456Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2320,7 +2349,7 @@ entries:
     version: 3.7.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.451220414Z"
+    created: "2024-01-18T23:01:49.555021824Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2349,7 +2378,7 @@ entries:
     version: 3.6.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.437164004Z"
+    created: "2024-01-18T23:01:49.534396407Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2378,7 +2407,7 @@ entries:
     version: 3.5.6
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.424562239Z"
+    created: "2024-01-18T23:01:49.514181538Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2407,7 +2436,7 @@ entries:
     version: 3.5.5
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.411118597Z"
+    created: "2024-01-18T23:01:49.499309241Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2436,7 +2465,7 @@ entries:
     version: 3.5.4
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.396662857Z"
+    created: "2024-01-18T23:01:49.485793317Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2465,7 +2494,7 @@ entries:
     version: 3.5.3
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.382300153Z"
+    created: "2024-01-18T23:01:49.47035636Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2494,7 +2523,7 @@ entries:
     version: 3.5.2
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.368486922Z"
+    created: "2024-01-18T23:01:49.447504672Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2523,7 +2552,7 @@ entries:
     version: 3.5.1
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.354448921Z"
+    created: "2024-01-18T23:01:49.432832255Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2552,7 +2581,7 @@ entries:
     version: 3.5.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.341368211Z"
+    created: "2024-01-18T23:01:49.419464251Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2581,7 +2610,7 @@ entries:
     version: 3.4.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.326782997Z"
+    created: "2024-01-18T23:01:49.406340358Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2610,7 +2639,7 @@ entries:
     version: 3.3.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:34.082754523Z"
+    created: "2024-01-18T23:01:49.144247308Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2639,7 +2668,7 @@ entries:
     version: 3.2.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.542453306Z"
+    created: "2024-01-18T23:01:48.611868625Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2668,7 +2697,7 @@ entries:
     version: 3.1.3
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.52804735Z"
+    created: "2024-01-18T23:01:48.599007833Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2697,7 +2726,7 @@ entries:
     version: 3.1.2
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.514673245Z"
+    created: "2024-01-18T23:01:48.585019433Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2726,7 +2755,7 @@ entries:
     version: 3.1.1
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.501711206Z"
+    created: "2024-01-18T23:01:48.570860557Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2755,7 +2784,7 @@ entries:
     version: 3.1.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.488443084Z"
+    created: "2024-01-18T23:01:48.55666681Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2784,7 +2813,7 @@ entries:
     version: 3.0.6
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.475063957Z"
+    created: "2024-01-18T23:01:48.543517816Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2813,7 +2842,7 @@ entries:
     version: 3.0.5
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.461330161Z"
+    created: "2024-01-18T23:01:48.530691421Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2842,7 +2871,7 @@ entries:
     version: 3.0.4
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.44730937Z"
+    created: "2024-01-18T23:01:48.513039711Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2871,7 +2900,7 @@ entries:
     version: 3.0.3
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.432982858Z"
+    created: "2024-01-18T23:01:48.499430231Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2900,7 +2929,7 @@ entries:
     version: 3.0.2
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.41927179Z"
+    created: "2024-01-18T23:01:48.485480705Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2929,7 +2958,7 @@ entries:
     version: 3.0.1
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.405824749Z"
+    created: "2024-01-18T23:01:48.471965264Z"
     dependencies:
     - condition: minio.enabled
       name: minio
@@ -2958,7 +2987,7 @@ entries:
     version: 3.0.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.39130888Z"
+    created: "2024-01-18T23:01:48.458565258Z"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -2984,7 +3013,7 @@ entries:
     version: 2.1.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.384500593Z"
+    created: "2024-01-18T23:01:48.451812036Z"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -3010,7 +3039,7 @@ entries:
     version: 2.0.0
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.376197344Z"
+    created: "2024-01-18T23:01:48.444627113Z"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -3035,7 +3064,7 @@ entries:
     version: 1.2.2
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.368008982Z"
+    created: "2024-01-18T23:01:48.438107269Z"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -3060,7 +3089,7 @@ entries:
     version: 1.2.1
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2024-01-18T03:46:33.361302056Z"
+    created: "2024-01-18T23:01:48.430819327Z"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -3085,7 +3114,7 @@ entries:
     version: 1.2.0
   - apiVersion: v2
     appVersion: 1.2.2
-    created: "2024-01-18T03:46:33.353822273Z"
+    created: "2024-01-18T23:01:48.423542348Z"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -3110,7 +3139,7 @@ entries:
     version: 1.1.3
   - apiVersion: v2
     appVersion: 1.2.1
-    created: "2024-01-18T03:46:33.348253366Z"
+    created: "2024-01-18T23:01:48.417764911Z"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -3135,7 +3164,7 @@ entries:
     version: 1.1.2
   - apiVersion: v2
     appVersion: 1.2.0
-    created: "2024-01-18T03:46:33.341680646Z"
+    created: "2024-01-18T23:01:48.41056942Z"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -3160,7 +3189,7 @@ entries:
     version: 1.1.1
   - apiVersion: v2
     appVersion: 1.2.0-dev
-    created: "2024-01-18T03:46:33.334291117Z"
+    created: "2024-01-18T23:01:48.405155777Z"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -3185,7 +3214,7 @@ entries:
     version: 1.1.0
   - apiVersion: v2
     appVersion: 1.2.0-dev
-    created: "2024-01-18T03:46:33.328066643Z"
+    created: "2024-01-18T23:01:48.399205343Z"
     dependencies:
     - condition: config.minio.enabled
       name: minio
@@ -3211,7 +3240,35 @@ entries:
   seafile:
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.950809511Z"
+    created: "2024-01-18T23:01:50.096184222Z"
+    dependencies:
+    - name: common
+      repository: https://szpadel.github.io/library-charts
+      version: 0.15.0
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.5.7
+    - condition: memcached.enabled
+      name: memcached
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.8.1
+    - condition: elasticsearch.enabled
+      name: elasticsearch
+      repository: https://charts.bitnami.com/bitnami
+      version: 19.16.2
+    description: Seafile is an open source file sync&share solution
+    digest: b1032838e4523f4624134dca84c0e6b5b21ac6b0649a0e74d9b898df744bb11b
+    name: seafile
+    sources:
+    - https://github.com/haiwen/seafile
+    type: application
+    urls:
+    - https://szpadel.github.io/public-charts/releases/seafile-0.17.3.tgz
+    version: 0.17.3
+  - apiVersion: v2
+    appVersion: 9.0.13
+    created: "2024-01-18T23:01:50.074938936Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3239,7 +3296,7 @@ entries:
     version: 0.17.2
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.931823721Z"
+    created: "2024-01-18T23:01:50.055550113Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3267,7 +3324,7 @@ entries:
     version: 0.17.1
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.911436909Z"
+    created: "2024-01-18T23:01:50.036642054Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3295,7 +3352,7 @@ entries:
     version: 0.17.0
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.890670947Z"
+    created: "2024-01-18T23:01:50.018340233Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3323,7 +3380,7 @@ entries:
     version: 0.16.0
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.871505812Z"
+    created: "2024-01-18T23:01:49.99945148Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3351,7 +3408,7 @@ entries:
     version: 0.15.0
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.85307139Z"
+    created: "2024-01-18T23:01:49.979935581Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3379,7 +3436,7 @@ entries:
     version: 0.14.3
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.834206828Z"
+    created: "2024-01-18T23:01:49.960118794Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3407,7 +3464,7 @@ entries:
     version: 0.14.2
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.815770796Z"
+    created: "2024-01-18T23:01:49.941200933Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3435,7 +3492,7 @@ entries:
     version: 0.14.1
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.797235645Z"
+    created: "2024-01-18T23:01:49.9215975Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3463,7 +3520,7 @@ entries:
     version: 0.14.0
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.778127842Z"
+    created: "2024-01-18T23:01:49.901458192Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3491,7 +3548,7 @@ entries:
     version: 0.13.1
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.759492765Z"
+    created: "2024-01-18T23:01:49.879519321Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3519,7 +3576,7 @@ entries:
     version: 0.13.0
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.74067593Z"
+    created: "2024-01-18T23:01:49.86014403Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3547,7 +3604,7 @@ entries:
     version: 0.12.1
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.722215087Z"
+    created: "2024-01-18T23:01:49.84059152Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3575,7 +3632,7 @@ entries:
     version: 0.12.0
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.70266531Z"
+    created: "2024-01-18T23:01:49.81686877Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3603,7 +3660,7 @@ entries:
     version: 0.11.7
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.683407895Z"
+    created: "2024-01-18T23:01:49.795213821Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3631,7 +3688,7 @@ entries:
     version: 0.11.6
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.664152608Z"
+    created: "2024-01-18T23:01:49.771073807Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3659,7 +3716,7 @@ entries:
     version: 0.11.5
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.645028187Z"
+    created: "2024-01-18T23:01:49.750985722Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3687,7 +3744,7 @@ entries:
     version: 0.11.4
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.625663919Z"
+    created: "2024-01-18T23:01:49.731372306Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3715,7 +3772,7 @@ entries:
     version: 0.11.3
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.606919047Z"
+    created: "2024-01-18T23:01:49.712943726Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3743,7 +3800,7 @@ entries:
     version: 0.11.2
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.587659023Z"
+    created: "2024-01-18T23:01:49.694697854Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3771,7 +3828,7 @@ entries:
     version: 0.11.1
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.567140005Z"
+    created: "2024-01-18T23:01:49.675174658Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3799,7 +3856,7 @@ entries:
     version: 0.11.0
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.548575928Z"
+    created: "2024-01-18T23:01:49.656275666Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3827,7 +3884,7 @@ entries:
     version: 0.10.0
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:35.322515287Z"
+    created: "2024-01-18T23:01:50.460722956Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3855,7 +3912,7 @@ entries:
     version: 0.9.0
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:35.304359465Z"
+    created: "2024-01-18T23:01:50.440545632Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3883,7 +3940,7 @@ entries:
     version: 0.8.0
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:35.285213462Z"
+    created: "2024-01-18T23:01:50.42144827Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3911,7 +3968,7 @@ entries:
     version: 0.7.7
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:35.265297189Z"
+    created: "2024-01-18T23:01:50.402825597Z"
     dependencies:
     - name: common
       repository: https://szpadel.github.io/library-charts
@@ -3939,7 +3996,7 @@ entries:
     version: 0.7.6
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:35.24669522Z"
+    created: "2024-01-18T23:01:50.383663078Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -3967,7 +4024,7 @@ entries:
     version: 0.7.5
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:35.22743865Z"
+    created: "2024-01-18T23:01:50.361182404Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -3995,7 +4052,7 @@ entries:
     version: 0.7.4
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:35.208396158Z"
+    created: "2024-01-18T23:01:50.342034804Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -4023,7 +4080,7 @@ entries:
     version: 0.7.3
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:35.185591152Z"
+    created: "2024-01-18T23:01:50.323789145Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -4051,7 +4108,7 @@ entries:
     version: 0.7.2
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:35.162440213Z"
+    created: "2024-01-18T23:01:50.306016286Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -4079,7 +4136,7 @@ entries:
     version: 0.7.1
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:35.144468503Z"
+    created: "2024-01-18T23:01:50.288239761Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -4107,7 +4164,7 @@ entries:
     version: 0.7.0
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:35.126605073Z"
+    created: "2024-01-18T23:01:50.27010713Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -4135,7 +4192,7 @@ entries:
     version: 0.6.2
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:35.108021122Z"
+    created: "2024-01-18T23:01:50.251377126Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -4163,7 +4220,7 @@ entries:
     version: 0.6.1
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:35.08920125Z"
+    created: "2024-01-18T23:01:50.232830671Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -4191,7 +4248,7 @@ entries:
     version: 0.6.0
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:35.071022716Z"
+    created: "2024-01-18T23:01:50.214367207Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -4219,7 +4276,7 @@ entries:
     version: 0.5.0
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:35.051947723Z"
+    created: "2024-01-18T23:01:50.193973879Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -4247,7 +4304,7 @@ entries:
     version: 0.4.2
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:35.031054525Z"
+    created: "2024-01-18T23:01:50.171308346Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -4275,7 +4332,7 @@ entries:
     version: 0.4.1
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:35.012771428Z"
+    created: "2024-01-18T23:01:50.151094809Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -4303,7 +4360,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.99021752Z"
+    created: "2024-01-18T23:01:50.132287Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -4331,7 +4388,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.972245867Z"
+    created: "2024-01-18T23:01:50.114052657Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -4359,7 +4416,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 9.0.13
-    created: "2024-01-18T03:46:34.529762386Z"
+    created: "2024-01-18T23:01:49.637881369Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -4387,7 +4444,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 9.0.9
-    created: "2024-01-18T03:46:34.511286893Z"
+    created: "2024-01-18T23:01:49.6194685Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -4413,4 +4470,4 @@ entries:
     urls:
     - https://szpadel.github.io/public-charts/releases/seafile-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-18T03:46:33.202152016Z"
+generated: "2024-01-18T23:01:48.269069863Z"
