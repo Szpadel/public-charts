@@ -3,7 +3,7 @@ name: repman
 homeURL: https://repman.io
 description: "Repman - PHP Repository Manager: packagist proxy and host for private packages"
 type: application
-version: 3.45.0
+version: 3.45.1
 # renovate: image=buddy/repman
 appVersion: 1.4.0
 dependencies:
@@ -13,7 +13,7 @@ dependencies:
     condition: minio.enabled
   - name: common
     repository: https://szpadel.github.io/library-charts
-    version: 0.21.2
+    version: 0.21.3
   - name: redis
     version: 18.19.4
     repository: https://charts.bitnami.com/bitnami
