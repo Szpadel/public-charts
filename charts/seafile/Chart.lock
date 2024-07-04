@@ -1,7 +1,7 @@
 dependencies:
 - name: common
   repository: https://szpadel.github.io/library-charts
-  version: 0.24.1
+  version: 0.24.2
 - name: mariadb
   repository: https://charts.bitnami.com/bitnami
   version: 11.5.7
@@ -11,5 +11,5 @@ dependencies:
 - name: elasticsearch
   repository: https://charts.bitnami.com/bitnami
   version: 19.21.2
-digest: sha256:3344b5c832f7f50fcba69c4c3b891489450d605ab0fdc005e2d6c24974acb754
-generated: "2024-06-14T21:48:52.521575842Z"
+digest: sha256:f843d0c918f591b9840f83313abfb91c15b82fa4f7100002737411adb35fc02b
+generated: "2024-07-04T16:16:00.867128751Z"
