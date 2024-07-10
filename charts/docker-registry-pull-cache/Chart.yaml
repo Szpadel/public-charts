@@ -2,12 +2,12 @@ apiVersion: v2
 name: docker-registry-pull-cache
 description: "Docker registry set as pull through cache"
 type: application
-version: 0.20.2
+version: 0.21.0
 appVersion: 2.8.1
 dependencies:
   - name: common
     repository: https://szpadel.github.io/library-charts
-    version: 0.24.2
+    version: 0.25.0
 maintainers:
   - name: Szpadel
     email: piotrekrogowski@gmail.com
