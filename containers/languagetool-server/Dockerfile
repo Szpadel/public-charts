@@ -34,3 +34,5 @@ USER languagetool
 ENTRYPOINT ["/sbin/tini", "--"]
 CMD ["java", "-cp", "languagetool-server.jar", "org.languagetool.server.HTTPServer", \
     "--config", "server.properties", "--public", "--port", "8081", "--allow-origin"]
+
+    #nope
