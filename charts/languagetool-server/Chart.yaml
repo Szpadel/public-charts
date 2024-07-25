@@ -1,0 +1,16 @@
+apiVersion: v2
+name: languagetool-server
+description: "LanguageTool HTTP Server"
+type: application
+version: 0.1.0
+appVersion: "6.4"
+dependencies:
+  - name: common
+    repository: https://szpadel.github.io/library-charts
+    version: 0.25.1
+maintainers:
+  - name: Szpadel
+    email: piotrekrogowski@gmail.com
+sources:
+  - https://github.com/Szpadel/public-charts/tree/master/charts/docker-registry-pull-cache
+  - https://github.com/Szpadel/public-charts/tree/master/containers/cleanup-registry-cache
