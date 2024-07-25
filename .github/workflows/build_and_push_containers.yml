@@ -66,6 +66,13 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Get version
+        id: get_version
+        if: env.PUSH_IMAGE == 'true'
+        run: |
+          VERSION=$(cat containers/${{ matrix.container_path }}/VERSION)
+          echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
