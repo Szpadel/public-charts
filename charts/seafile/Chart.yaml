@@ -29,7 +29,7 @@ dependencies:
     repository: https://szpadel.github.io/library-charts
     version: 0.25.1
   - name: mariadb
-    version: 11.5.7
+    version: 14.1.4
     repository: https://charts.bitnami.com/bitnami
     condition: mariadb.enabled
   - name: memcached

@@ -4,12 +4,12 @@ dependencies:
   version: 0.25.1
 - name: mariadb
   repository: https://charts.bitnami.com/bitnami
-  version: 11.5.7
+  version: 14.1.4
 - name: memcached
   repository: https://charts.bitnami.com/bitnami
   version: 6.14.0
 - name: elasticsearch
   repository: https://charts.bitnami.com/bitnami
   version: 19.21.2
-digest: sha256:2c2ed552bff56123615e91497fb50d89e928f217cf43c9c11988507fd3050ce1
-generated: "2024-07-17T18:31:16.40236866Z"
+digest: sha256:d717c2fd93a6f32aefa034e9217b4592b31718a4ae6d15d60db56d2a1ae4fd0e
+generated: "2024-07-25T13:16:31.72449341Z"
