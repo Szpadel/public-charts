@@ -2,7 +2,7 @@ apiVersion: v2
 name: languagetool-server
 description: "LanguageTool HTTP Server"
 type: application
-version: 0.1.0
+version: 0.1.1
 appVersion: "6.4"
 dependencies:
   - name: common

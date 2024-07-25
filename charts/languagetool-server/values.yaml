@@ -1,5 +1,5 @@
 image:
-  repository: ghcr.io/szpadel/cleanup-registry
+  repository: ghcr.io/szpadel/languagetool-server
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
