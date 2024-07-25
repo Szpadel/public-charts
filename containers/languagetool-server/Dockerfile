@@ -3,7 +3,7 @@ ENV VERSION=6.4
 RUN apk add --no-cache curl
 WORKDIR /build
 RUN curl -fL https://languagetool.org/download/LanguageTool-${VERSION}.zip -O
-RUN unzip LanguageTool-stable.zip && mv LanguageTool-${VERSION} /app
+RUN unzip LanguageTool-${VERSION}.zip && mv LanguageTool-${VERSION} /app
 
 FROM alpine AS build-fasttext
 ENV VERSION=0.9.2
