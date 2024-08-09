@@ -2,12 +2,12 @@ apiVersion: v2
 name: languagetool-server
 description: "LanguageTool HTTP Server"
 type: application
-version: 0.2.0
+version: 0.2.1
 appVersion: "6.4"
 dependencies:
   - name: common
     repository: https://szpadel.github.io/library-charts
-    version: 0.26.0
+    version: 0.26.1
 maintainers:
   - name: Szpadel
     email: piotrekrogowski@gmail.com
