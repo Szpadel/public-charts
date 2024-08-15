@@ -15,7 +15,7 @@ controller:
     role: app
   additionalContainers:
     nginx:
-      image: nginx:1.27.0@sha256:2b7d5697bb76629fe4b4b2217c58d5f21869d2a99551e42eaff47dde67f123ed
+      image: nginx:1.27.1@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
       volumeMounts:
       - name: public
         mountPath: /app/public
