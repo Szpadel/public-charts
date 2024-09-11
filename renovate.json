@@ -13,7 +13,7 @@
     ":prHourlyLimitNone",
     ":pinVersions",
     "docker:pinDigests",
-    "regexManagers:helmChartYamlAppVersions"
+    "customManagers:helmChartYamlAppVersions"
   ],
   "dockerfile": {
     "enabled": true,
