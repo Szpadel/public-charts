@@ -13,7 +13,7 @@
     ":prHourlyLimitNone",
     ":pinVersions",
     "docker:pinDigests",
-    "customManagers:helmChartYamlAppVersions"
+    "regexManagers:helmChartYamlAppVersions"
   ],
   "dockerfile": {
     "enabled": true,
@@ -38,6 +38,7 @@
   "packageRules": [
     {
       "matchPaths": [
+        "charts/*/Chart.yaml",
         "charts/*/values.yaml"
       ],
       "matchUpdateTypes": [
@@ -61,6 +62,7 @@
     },
     {
       "matchPaths": [
+        "charts/*/Chart.yaml",
         "charts/*/values.yaml"
       ],
       "matchUpdateTypes": [
@@ -81,48 +83,6 @@
     },
     {
       "matchPaths": [
-        "charts/*/Chart.yaml"
-      ],
-      "matchUpdateTypes": [
-        "minor"
-      ],
-      "pinDigests": false,
-      "postUpgradeTasks": {
-        "commands": [
-          "docker run --rm -w \"$PWD\" -v\"$PWD:$PWD\" alpine sh -c 'apk add --no-cache bash && ./scripts/release.sh --alpine-install-deps --chown 1000:1000 --bump-minor \"$(basename '{{parentDir}}')\"'"
-        ],
-        "fileFilters": [
-          "**/Chart.yaml",
-          "releases/*",
-          "index.yaml"
-        ],
-        "executionMode": "update"
-      },
-      "groupName": "helm-minor"
-    },
-    {
-      "matchPaths": [
-        "charts/*/Chart.yaml"
-      ],
-      "matchUpdateTypes": [
-        "patch"
-      ],
-      "pinDigests": false,
-      "postUpgradeTasks": {
-        "commands": [
-          "docker run --rm -w \"$PWD\" -v\"$PWD:$PWD\" alpine sh -c 'apk add --no-cache bash && ./scripts/release.sh --alpine-install-deps --chown 1000:1000 --bump-patch \"$(basename '{{parentDir}}')\"'"
-        ],
-        "fileFilters": [
-          "**/Chart.yaml",
-          "releases/*",
-          "index.yaml"
-        ],
-        "executionMode": "update"
-      },
-      "groupName": "helm-patch"
-    },
-    {
-      "matchPaths": [
         "containers/*/Dockerfile"
       ],
       "postUpgradeTasks": {
@@ -134,6 +94,19 @@
         ],
         "executionMode": "update"
       }
+    }
+  ],
+  "customManagers": [
+    {
+      "pinDigests": false,
+      "customType": "regex",
+      "datasourceTemplate": "docker",
+      "fileMatch": [
+        "(^|/)Chart\\.yaml$"
+      ],
+      "matchStrings": [
+        "#\\s*renovate: image=(?<depName>.*?)\\s+appVersion:\\s*[\"']?(?<currentValue>[\\w+\\.\\-]*)"
+      ]
     }
   ]
 }
