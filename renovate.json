@@ -13,7 +13,7 @@
     ":prHourlyLimitNone",
     ":pinVersions",
     "docker:pinDigests",
-    "regexManagers:helmChartYamlAppVersions"
+    "customManagers:helmChartYamlAppVersions"
   ],
   "dockerfile": {
     "enabled": true,
@@ -36,6 +36,13 @@
     ]
   },
   "packageRules": [
+    {
+      "matchPaths": [
+        "charts/*/Chart.yaml"
+      ],
+      "pinDigest": false,
+      "pinDigests": false
+    },
     {
       "matchPaths": [
         "charts/*/Chart.yaml",
@@ -94,19 +101,6 @@
         ],
         "executionMode": "update"
       }
-    }
-  ],
-  "customManagers": [
-    {
-      "pinDigests": false,
-      "customType": "regex",
-      "datasourceTemplate": "docker",
-      "fileMatch": [
-        "(^|/)Chart\\.yaml$"
-      ],
-      "matchStrings": [
-        "#\\s*renovate: image=(?<depName>.*?)\\s+appVersion:\\s*[\"']?(?<currentValue>[\\w+\\.\\-]*)"
-      ]
     }
   ]
 }
