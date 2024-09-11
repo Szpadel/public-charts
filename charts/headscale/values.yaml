@@ -19,7 +19,7 @@ additionalControllers:
     enabled: true
     image:
       repository: ghcr.io/gurucomputing/headscale-ui
-      tag: 2023.01.30-beta-1
+      tag: 2024.02.24-beta1
     type: deployment
     labels:
       role: ui
