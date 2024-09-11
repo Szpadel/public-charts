@@ -61,7 +61,8 @@
     },
     {
       "matchPaths": [
-        "charts/*/values.yaml"
+        "charts/*/values.yaml",
+        "charts/*/Chart.yaml"
       ],
       "matchUpdateTypes": [
         "minor"
@@ -84,8 +85,7 @@
         "charts/*/Chart.yaml"
       ],
       "matchUpdateTypes": [
-        "patch",
-        "digest"
+        "patch"
       ],
       "postUpgradeTasks": {
         "commands": [
