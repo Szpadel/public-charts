@@ -21,7 +21,7 @@ version: 0.27.1
 # incremented each time you make changes to the application. Versions are not expected to
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.
-# renovate: image=headscale/headscale
+# renovate: image=ghcr.io/juanfont/headscale
 appVersion: "0.23.0"
 sources:
   - https://github.com/juanfont/headscale
