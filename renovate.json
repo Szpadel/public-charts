@@ -61,8 +61,7 @@
     },
     {
       "matchPaths": [
-        "charts/*/values.yaml",
-        "charts/*/Chart.yaml"
+        "charts/*/values.yaml"
       ],
       "matchUpdateTypes": [
         "minor"
@@ -85,8 +84,30 @@
         "charts/*/Chart.yaml"
       ],
       "matchUpdateTypes": [
+        "minor"
+      ],
+      "pinDigests": false,
+      "postUpgradeTasks": {
+        "commands": [
+          "docker run --rm -w \"$PWD\" -v\"$PWD:$PWD\" alpine sh -c 'apk add --no-cache bash && ./scripts/release.sh --alpine-install-deps --chown 1000:1000 --bump-minor \"$(basename '{{parentDir}}')\"'"
+        ],
+        "fileFilters": [
+          "**/Chart.yaml",
+          "releases/*",
+          "index.yaml"
+        ],
+        "executionMode": "update"
+      },
+      "groupName": "helm-minor"
+    },
+    {
+      "matchPaths": [
+        "charts/*/Chart.yaml"
+      ],
+      "matchUpdateTypes": [
         "patch"
       ],
+      "pinDigests": false,
       "postUpgradeTasks": {
         "commands": [
           "docker run --rm -w \"$PWD\" -v\"$PWD:$PWD\" alpine sh -c 'apk add --no-cache bash && ./scripts/release.sh --alpine-install-deps --chown 1000:1000 --bump-patch \"$(basename '{{parentDir}}')\"'"
