@@ -12,7 +12,7 @@ probes:
 
 image:
   repository: ghcr.io/juanfont/headscale
-  tag:
+  tag: 0.23.0-rc.1
 
 additionalControllers:
   ui:
