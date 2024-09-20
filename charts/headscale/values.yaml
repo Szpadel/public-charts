@@ -18,8 +18,8 @@ additionalControllers:
   ui:
     enabled: true
     image:
-      repository: ghcr.io/gurucomputing/headscale-ui
-      tag: "2024.02.24-beta1@sha256:4c618a7b6e8b32f5ef6af3c7e6936c63e8568ad9ae8d190dafb2551a64ff40a2"
+      repository: goodieshq/headscale-admin
+      tag: 0.1.12b
     type: deployment
     labels:
       role: ui
@@ -380,7 +380,7 @@ config:
     # node1.example.com
     # This is a legacy option as Headscale has have this wrongly implemented
     # while in upstream Tailscale, the username is not included.
-    use_username_in_magic_dns: false
+    # use_username_in_magic_dns: false
 
   # Unix socket used for the CLI to connect without authentication
   # Note: for production you will want to set this to something like:
