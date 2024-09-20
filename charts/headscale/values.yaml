@@ -19,7 +19,7 @@ additionalControllers:
     enabled: true
     image:
       repository: goodieshq/headscale-admin
-      tag: 0.1.12b
+      tag: 0.1.12b@sha256:21b419eeb48caf4eb17d362a49204d50aac57cc5984a36803d0791d74ef0232c
     type: deployment
     labels:
       role: ui
