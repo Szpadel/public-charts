@@ -1,8 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base",
-    "config:base",
+    "config:recommended",
+    "config:recommended",
     ":enablePreCommit",
     ":automergeMinor",
     ":automergePatch",
@@ -21,9 +21,6 @@
       "^containers/[^/]+/Dockerfile$"
     ]
   },
-  "docker": {
-    "versioning": "docker"
-  },
   "major": {
     "dependencyDashboardApproval": true
   },
@@ -37,14 +34,22 @@
   },
   "packageRules": [
     {
-      "matchPaths": [
+      "matchCategories": [
+        "docker"
+      ],
+      "versioning": "docker"
+    },
+    {
+      "matchFileNames": [
         "charts/*/Chart.yaml"
       ],
-      "pinDigest": false,
+      "pinDigest": {
+        "enabled": false
+      },
       "pinDigests": false
     },
     {
-      "matchPaths": [
+      "matchFileNames": [
         "charts/*/Chart.yaml",
         "charts/*/values.yaml"
       ],
@@ -68,7 +73,7 @@
       "groupName": "helm-patch"
     },
     {
-      "matchPaths": [
+      "matchFileNames": [
         "charts/*/Chart.yaml",
         "charts/*/values.yaml"
       ],
@@ -89,7 +94,7 @@
       "groupName": "helm-minor"
     },
     {
-      "matchPaths": [
+      "matchFileNames": [
         "containers/*/Dockerfile"
       ],
       "postUpgradeTasks": {
