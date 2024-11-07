@@ -3,6 +3,7 @@ name: languagetool-server
 description: "LanguageTool HTTP Server"
 type: application
 version: 0.3.0
+# renovate: image=ghcr.io/szpadel/languagetool-server
 appVersion: "6.4"
 dependencies:
   - name: common
