@@ -146,7 +146,7 @@ EXPORT {
   Pseudo = "/";
   ${ALLOWED_CLIENTS}
   Access_Type = ${READ_ONLY_FLAG};
-  Access "*";
+  Access = "*";
   Root_Access = "*;
   Squash = No_root_squash;
   FSAL {
