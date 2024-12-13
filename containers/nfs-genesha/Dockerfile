@@ -7,7 +7,6 @@ RUN dnf install -y \
     nfs-utils \
     && dnf clean all
 
-COPY exports /etc/
 COPY nfsd.sh /usr/bin/nfsd.sh
 
 RUN mkdir -p  /var/run/dbus &&\
