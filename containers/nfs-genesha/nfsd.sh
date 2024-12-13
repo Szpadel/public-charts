@@ -135,19 +135,18 @@ NFS_Core_Param {
 }
 
 EXPORT_DEFAULTS {
-  Transports = TCP;
+  Transports = TCP,UDP;
   SecType = sys;
+  Protocols = 3,4;
 }
 
 EXPORT {
   Export_Id = 1;
   Path = "${SHARED_DIRECTORY}";
-  Pseudo = "${SHARED_DIRECTORY}";
+  Pseudo = "/";
   ${ALLOWED_CLIENTS}
   Access_Type = ${READ_ONLY_FLAG};
   Squash = No_root_squash;
-  # NFS Ganesha uses caching and other settings differently from kernel NFS,
-  # so we won't replicate sync/async semantics here.
 }
 EOF
 
