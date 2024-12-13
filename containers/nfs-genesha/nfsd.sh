@@ -147,7 +147,7 @@ EXPORT {
   ${ALLOWED_CLIENTS}
   Access_Type = ${READ_ONLY_FLAG};
   Access = "*";
-  Root_Access = "*;
+  Root_Access = "*";
   Squash = No_root_squash;
   FSAL {
     Name = VFS;
