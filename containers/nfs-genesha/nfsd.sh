@@ -129,15 +129,13 @@ else
   # Build a minimal Ganesha configuration
   cat <<EOF > ${GANESHA_CONF}
 NFS_Core_Param {
-  NFS_Protocols = 4;
+  mount_path_pseudo = true;
   # Allow NFS Ganesha to continue if PR_SET_IO_FLUSHER fails
   allow_set_io_flusher_fail = true;
 }
 
 EXPORT_DEFAULTS {
-  Transports = TCP,UDP;
   SecType = sys;
-  Protocols = 3,4;
 }
 
 EXPORT {
@@ -181,7 +179,7 @@ echo ""
 
 # Start NFS Ganesha with additional debug flags
 echo "Starting NFS-Ganesha..."
-ganesha.nfsd -F -L /dev/stdout -f ${GANESHA_CONF} -N NIV_EVENT  &
+ganesha.nfsd -F -L /dev/stdout -f ${GANESHA_CONF} -N NIV_INFO  &
 GANESHA_PID=$!
 
 # Wait until ganesha stops running

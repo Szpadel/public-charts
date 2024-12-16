@@ -1,4 +1,4 @@
-FROM fedora:rawhide
+FROM fedora:41
 
 RUN dnf install -y \
     nfs-ganesha \
