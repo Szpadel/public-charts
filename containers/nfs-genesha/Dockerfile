@@ -2,6 +2,7 @@ FROM fedora:rawhide
 
 RUN dnf install -y \
     nfs-ganesha \
+    nfs-ganesha-vfs \
     dbus-daemon \
     rpcbind \
     nfs-utils \
