@@ -4,7 +4,7 @@ description: "LanguageTool HTTP Server"
 type: application
 version: 0.4.0
 # renovate: image=ghcr.io/szpadel/languagetool-server
-appVersion: "6.5"
+appVersion: "6.6"
 dependencies:
   - name: common
     repository: https://szpadel.github.io/library-charts
