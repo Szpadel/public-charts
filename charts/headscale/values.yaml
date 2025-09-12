@@ -12,14 +12,14 @@ probes:
 
 image:
   repository: ghcr.io/juanfont/headscale
-  tag: 0.23.0-rc.1@sha256:bd1102bff614b61aec8c547fdae69c9f0fad61265c0f739fa156e997928396ee
+  tag: 0.26.1
 
 additionalControllers:
   ui:
     enabled: true
     image:
       repository: goodieshq/headscale-admin
-      tag: 0.1.12b@sha256:21b419eeb48caf4eb17d362a49204d50aac57cc5984a36803d0791d74ef0232c
+      tag: 0.25.6
     type: deployment
     labels:
       role: ui
