@@ -1,4 +1,4 @@
-FROM alpine@sha256:7eccd4d5d574a3c889b0a6d97b2cdd0308c8e1afc2bba8d467c2b87d879b0c1c as base_alpine
+FROM alpine@sha256:4bcff63911fcb4448bd4fdacec207030997caf25e9bea4045fa6c8c44de311d1 as base_alpine
 
 FROM base_alpine AS build-languagetool
 ENV VERSION=6.6
