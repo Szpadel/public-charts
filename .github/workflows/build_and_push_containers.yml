@@ -75,7 +75,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build amd64 image for pull request
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request' && matrix.container_path != 'ingress-nginx-controller'
         uses: docker/build-push-action@v6
         with:
           context: containers/${{ matrix.container_path }}
@@ -83,22 +83,86 @@ jobs:
           push: false
           tags: ${{ env.IMAGE_NAME }}:${{ github.sha }}
 
+      - name: Build ingress-nginx amd64 image for pull request
+        if: github.event_name == 'pull_request' && matrix.container_path == 'ingress-nginx-controller'
+        uses: docker/build-push-action@v6
+        with:
+          context: containers/${{ matrix.container_path }}
+          platforms: linux/amd64
+          target: controller
+          push: false
+          build-args: |
+            IMAGE_VERSION=${{ env.VERSION }}
+          tags: ${{ env.IMAGE_NAME }}:${{ github.sha }}
+
+      - name: Build ingress-nginx chroot amd64 image for pull request
+        if: github.event_name == 'pull_request' && matrix.container_path == 'ingress-nginx-controller'
+        uses: docker/build-push-action@v6
+        with:
+          context: containers/${{ matrix.container_path }}
+          platforms: linux/amd64
+          target: controller-chroot
+          push: false
+          build-args: |
+            IMAGE_VERSION=${{ env.VERSION }}
+          tags: ${{ env.IMAGE_NAME }}-chroot:${{ github.sha }}
+
       - name: Build and push amd64 image by digest
         id: build
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' && matrix.container_path != 'ingress-nginx-controller'
         uses: docker/build-push-action@v6
         with:
           context: containers/${{ matrix.container_path }}
           platforms: linux/amd64
           outputs: type=image,name=${{ env.IMAGE_NAME }},push-by-digest=true,name-canonical=true,push=true
 
+      - name: Build and push ingress-nginx amd64 image by digest
+        id: build-controller
+        if: github.event_name != 'pull_request' && matrix.container_path == 'ingress-nginx-controller'
+        uses: docker/build-push-action@v6
+        with:
+          context: containers/${{ matrix.container_path }}
+          platforms: linux/amd64
+          target: controller
+          build-args: |
+            IMAGE_VERSION=${{ env.VERSION }}
+          outputs: type=image,name=${{ env.IMAGE_NAME }},push-by-digest=true,name-canonical=true,push=true
+
+      - name: Build and push ingress-nginx chroot amd64 image by digest
+        id: build-controller-chroot
+        if: github.event_name != 'pull_request' && matrix.container_path == 'ingress-nginx-controller'
+        uses: docker/build-push-action@v6
+        with:
+          context: containers/${{ matrix.container_path }}
+          platforms: linux/amd64
+          target: controller-chroot
+          build-args: |
+            IMAGE_VERSION=${{ env.VERSION }}
+          outputs: type=image,name=${{ env.IMAGE_NAME }}-chroot,push-by-digest=true,name-canonical=true,push=true
+
       - name: Store amd64 digest
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' && matrix.container_path != 'ingress-nginx-controller'
         run: |
           set -euo pipefail
           mkdir -p /tmp/digests
           digest="${{ steps.build.outputs.digest }}"
           touch "/tmp/digests/${digest#sha256:}"
+
+      - name: Store ingress-nginx amd64 digest
+        if: github.event_name != 'pull_request' && matrix.container_path == 'ingress-nginx-controller'
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/digests
+          digest="${{ steps.build-controller.outputs.digest }}"
+          touch "/tmp/digests/${digest#sha256:}"
+
+      - name: Store ingress-nginx chroot amd64 digest
+        if: github.event_name != 'pull_request' && matrix.container_path == 'ingress-nginx-controller'
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/digests-chroot
+          digest="${{ steps.build-controller-chroot.outputs.digest }}"
+          touch "/tmp/digests-chroot/${digest#sha256:}"
 
       - name: Upload amd64 digest
         if: github.event_name != 'pull_request'
@@ -106,6 +170,15 @@ jobs:
         with:
           name: digests-${{ matrix.container_path }}-linux-amd64
           path: /tmp/digests/*
+          if-no-files-found: error
+          retention-days: 1
+
+      - name: Upload ingress-nginx chroot amd64 digest
+        if: github.event_name != 'pull_request' && matrix.container_path == 'ingress-nginx-controller'
+        uses: actions/upload-artifact@v4
+        with:
+          name: digests-${{ matrix.container_path }}-chroot-linux-amd64
+          path: /tmp/digests-chroot/*
           if-no-files-found: error
           retention-days: 1
 
@@ -139,24 +212,75 @@ jobs:
 
       - name: Build and push arm64 image by digest
         id: build
+        if: matrix.container_path != 'ingress-nginx-controller'
         uses: docker/build-push-action@v6
         with:
           context: containers/${{ matrix.container_path }}
           platforms: linux/arm64
           outputs: type=image,name=${{ env.IMAGE_NAME }},push-by-digest=true,name-canonical=true,push=true
 
+      - name: Build and push ingress-nginx arm64 image by digest
+        id: build-controller
+        if: matrix.container_path == 'ingress-nginx-controller'
+        uses: docker/build-push-action@v6
+        with:
+          context: containers/${{ matrix.container_path }}
+          platforms: linux/arm64
+          target: controller
+          build-args: |
+            IMAGE_VERSION=${{ env.VERSION }}
+          outputs: type=image,name=${{ env.IMAGE_NAME }},push-by-digest=true,name-canonical=true,push=true
+
+      - name: Build and push ingress-nginx chroot arm64 image by digest
+        id: build-controller-chroot
+        if: matrix.container_path == 'ingress-nginx-controller'
+        uses: docker/build-push-action@v6
+        with:
+          context: containers/${{ matrix.container_path }}
+          platforms: linux/arm64
+          target: controller-chroot
+          build-args: |
+            IMAGE_VERSION=${{ env.VERSION }}
+          outputs: type=image,name=${{ env.IMAGE_NAME }}-chroot,push-by-digest=true,name-canonical=true,push=true
+
       - name: Store arm64 digest
+        if: matrix.container_path != 'ingress-nginx-controller'
         run: |
           set -euo pipefail
           mkdir -p /tmp/digests
           digest="${{ steps.build.outputs.digest }}"
           touch "/tmp/digests/${digest#sha256:}"
 
+      - name: Store ingress-nginx arm64 digest
+        if: matrix.container_path == 'ingress-nginx-controller'
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/digests
+          digest="${{ steps.build-controller.outputs.digest }}"
+          touch "/tmp/digests/${digest#sha256:}"
+
+      - name: Store ingress-nginx chroot arm64 digest
+        if: matrix.container_path == 'ingress-nginx-controller'
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/digests-chroot
+          digest="${{ steps.build-controller-chroot.outputs.digest }}"
+          touch "/tmp/digests-chroot/${digest#sha256:}"
+
       - name: Upload arm64 digest
         uses: actions/upload-artifact@v4
         with:
           name: digests-${{ matrix.container_path }}-linux-arm64
           path: /tmp/digests/*
+          if-no-files-found: error
+          retention-days: 1
+
+      - name: Upload ingress-nginx chroot arm64 digest
+        if: matrix.container_path == 'ingress-nginx-controller'
+        uses: actions/upload-artifact@v4
+        with:
+          name: digests-${{ matrix.container_path }}-chroot-linux-arm64
+          path: /tmp/digests-chroot/*
           if-no-files-found: error
           retention-days: 1
 
@@ -191,6 +315,20 @@ jobs:
           name: digests-${{ matrix.container_path }}-linux-arm64
           path: /tmp/digests/linux-arm64
 
+      - name: Download ingress-nginx chroot amd64 digest
+        if: matrix.container_path == 'ingress-nginx-controller'
+        uses: actions/download-artifact@v4
+        with:
+          name: digests-${{ matrix.container_path }}-chroot-linux-amd64
+          path: /tmp/digests-chroot/linux-amd64
+
+      - name: Download ingress-nginx chroot arm64 digest
+        if: matrix.container_path == 'ingress-nginx-controller'
+        uses: actions/download-artifact@v4
+        with:
+          name: digests-${{ matrix.container_path }}-chroot-linux-arm64
+          path: /tmp/digests-chroot/linux-arm64
+
       - name: Log in to GHCR
         uses: docker/login-action@v3
         with:
@@ -215,4 +353,21 @@ jobs:
           docker buildx imagetools create \
             -t "${IMAGE_NAME}:${{ github.sha }}" \
             -t "${IMAGE_NAME}:${VERSION}" \
+            "${digest_refs[@]}"
+
+      - name: Create and push ingress-nginx chroot manifest
+        if: matrix.container_path == 'ingress-nginx-controller'
+        run: |
+          set -euo pipefail
+
+          digest_refs=()
+          for digest_dir in /tmp/digests-chroot/linux-amd64 /tmp/digests-chroot/linux-arm64; do
+            for digest_file in "$digest_dir"/*; do
+              digest_refs+=("${IMAGE_NAME}-chroot@sha256:$(basename "${digest_file}")")
+            done
+          done
+
+          docker buildx imagetools create \
+            -t "${IMAGE_NAME}-chroot:${{ github.sha }}" \
+            -t "${IMAGE_NAME}-chroot:${VERSION}" \
             "${digest_refs[@]}"
