@@ -12,26 +12,104 @@ probes:
 
 image:
   repository: ghcr.io/juanfont/headscale
-  tag: 0.26.1
+  tag: 0.29.1
 
-additionalControllers:
-  ui:
-    enabled: true
-    image:
-      repository: goodieshq/headscale-admin
-      tag: 0.25.6
-    type: deployment
-    labels:
-      role: ui
-    selectorLabels:
-      role: ui
-    persistence:
-      data:
+headscaleConfig:
+  path: /data/config.yaml
+
+headplane:
+  enabled: true
+  image:
+    repository: ghcr.io/tale/headplane
+    tag: 0.6.3
+    pullPolicy: IfNotPresent
+  cookieSecret:
+    create: true
+    existingSecret: ""
+  config:
+    server:
+      host: "0.0.0.0"
+      port: 3000
+      base_url: "http://localhost:3000"
+      cookie_secret_path: "/etc/headplane/secrets/cookie_secret"
+      cookie_secure: true
+      cookie_max_age: 86400
+      data_path: "/var/lib/headplane"
+    headscale:
+      url: "http://127.0.0.1:8080"
+      config_path: "/data/config.yaml"
+      config_strict: false
+    integration:
+      agent:
+        enabled: false
+      docker:
+        enabled: false
+      kubernetes:
+        enabled: true
+        validate_manifest: true
+        pod_name: headscale
+      proc:
         enabled: false
 
+serviceAccount:
+  create: true
+
+automountServiceAccountToken: true
+
+initContainers:
+  seed-headscale-config:
+    image: docker.io/library/busybox:1.36.1
+    command:
+      - sh
+      - -c
+      - |
+        set -eu
+        target={{ .Values.headscaleConfig.path | quote }}
+        mkdir -p "$(dirname "$target")" /data/headplane
+        if [ ! -f "$target" ]; then
+          cp /seed/config.yaml "$target"
+        fi
+    volumeMounts:
+      - name: data
+        mountPath: /data
+      - name: headscale-config-seed
+        mountPath: /seed/config.yaml
+        subPath: config.yaml
+        readOnly: true
+
+additionalContainers:
+  headplane:
+    enabled: true
+    image: "{{ .Values.headplane.image.repository }}:{{ .Values.headplane.image.tag }}"
+    imagePullPolicy: "{{ .Values.headplane.image.pullPolicy }}"
+    env:
+      HEADPLANE_LOAD_ENV_OVERRIDES: "true"
+      HEADPLANE_INTEGRATION__KUBERNETES__POD_NAME:
+        valueFrom:
+          fieldRef:
+            fieldPath: metadata.name
+    ports:
+      - name: headplane
+        containerPort: 3000
+        protocol: TCP
+    volumeMounts:
+      - name: data
+        mountPath: /data
+      - name: data
+        mountPath: /var/lib/headplane
+        subPath: headplane
+      - name: headplane-config
+        mountPath: /etc/headplane/config.yaml
+        subPath: config.yaml
+        readOnly: true
+      - name: headplane-cookie-secret
+        mountPath: /etc/headplane/secrets/cookie_secret
+        subPath: cookie_secret
+        readOnly: true
 
 env:
   TZ: UTC
+  HEADSCALE_CONFIG: /data/config.yaml
 
 service:
   main:
@@ -50,12 +128,13 @@ service:
   ui:
     enabled: true
     selectorLabels:
-      role: ui
+      role: primary
     ports:
       http:
         enabled: true
         protocol: TCP
         port: 80
+        targetPort: 3000
   derp:
     selectorLabels:
       role: primary
@@ -72,8 +151,11 @@ ingress:
 
 persistence:
   data:
-    enabled: false
+    enabled: true
+    accessMode: ReadWriteOnce
     mountPath: /data
+    size: 1Gi
+    type: pvc
 
 config:
   # The url clients will connect to.
@@ -105,6 +187,8 @@ config:
   # be unencrypted. Only enable if you know what you
   # are doing.
   grpc_allow_insecure: false
+
+  trusted_proxies: []
 
   # The Noise section includes specific configuration for the
   # TS2021 Noise protocol
@@ -153,6 +237,9 @@ config:
       region_code: "headscale"
       region_name: "Headscale Embedded DERP"
 
+      # Only allow clients associated with this server access
+      verify_clients: true
+
       # Listens over UDP at the configured address for STUN connections - to help with NAT traversal.
       # When the embedded DERP server is enabled stun_listen_addr MUST be defined.
       #
@@ -172,8 +259,8 @@ config:
 
       # For better connection stability (especially when using an Exit-Node and DNS is not working),
       # it is possible to optionally add the public IPv4 and IPv6 address to the Derp-Map using:
-      ipv4: 1.2.3.4
-      ipv6: 2001:db8::1
+      # ipv4: 198.51.100.1
+      # ipv6: 2001:db8::1
 
     # List of externally available DERP maps encoded in JSON
     urls:
@@ -195,13 +282,19 @@ config:
     auto_update_enabled: true
 
     # How often should we check for DERP updates?
-    update_frequency: 24h
+    update_frequency: 3h
 
   # Disables the automatic check for headscale updates on startup
   disable_check_updates: false
 
-  # Time before an inactive ephemeral node is deleted?
-  ephemeral_node_inactivity_timeout: 30m
+  node:
+    expiry: 0
+    ephemeral:
+      inactivity_timeout: 30m
+    routes:
+      ha:
+        probe_interval: 10s
+        probe_timeout: 5s
 
   database:
     # Database type. Available options: sqlite, postgres
@@ -233,6 +326,7 @@ config:
       # Enable WAL mode for SQLite. This is recommended for production environments.
       # https://www.sqlite.org/wal.html
       write_ahead_log: true
+      wal_autocheckpoint: 1000
 
     # # Postgres config
     # Please note that using Postgres is highly discouraged as it is only supported for legacy reasons.
@@ -335,6 +429,8 @@ config:
     # The FQDN of the hosts will be
     # `hostname.base_domain` (e.g., _myhost.example.com_).
     base_domain: example.com
+
+    override_local_dns: true
 
     # List of DNS servers to expose to clients.
     nameservers:
@@ -447,7 +543,8 @@ config:
     # disabled by default. Enabling this will make your clients send logs to Tailscale Inc.
     enabled: false
 
-  # Enabling this option makes devices prefer a random port for WireGuard traffic over the
-  # default static port 41641. This option is intended as a workaround for some buggy
-  # firewall devices. See https://tailscale.com/kb/1181/firewalls/ for more information.
-  randomize_client_port: false
+  taildrop:
+    enabled: true
+
+  auto_update:
+    enabled: false

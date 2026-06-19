@@ -1,17 +1,46 @@
 {{/* Make sure all variables are set properly */}}
 {{- include "common.values.setup" . }}
 
-{{/* Append the configMap volume to the volumes */}}
-{{- define "headscale.configVolume" -}}
-enabled: "true"
-mountPath: "/etc/headscale/config.yaml"
-subPath: "config.yaml"
+{{- if not .Values.headplane.enabled -}}
+{{- $_ := unset .Values.additionalContainers "headplane" -}}
+{{- with .Values.service.ui -}}
+{{- $_ := set . "enabled" false -}}
+{{- end -}}
+{{- end -}}
+
+{{/* Append the rendered config seed volume to the volumes. */}}
+{{- define "headscale.configSeedVolume" -}}
+enabled: true
+autoMount: false
 type: "custom"
 volumeSpec:
   configMap:
     name: {{ include "common.names.fullname" . }}-config
 {{- end -}}
-{{- $_ := set .Values.persistence "headscale-config" (include "headscale.configVolume" . | fromYaml) -}}
+{{- $_ := set .Values.persistence "headscale-config-seed" (include "headscale.configSeedVolume" . | fromYaml) -}}
+
+{{- define "headscale.headplaneConfigVolume" -}}
+enabled: true
+autoMount: false
+type: "custom"
+volumeSpec:
+  configMap:
+    name: {{ include "headscale.headplaneConfigMapName" . }}
+{{- end -}}
+
+{{- define "headscale.headplaneCookieSecretVolume" -}}
+enabled: true
+autoMount: false
+type: "custom"
+volumeSpec:
+  secret:
+    secretName: {{ include "headscale.headplaneCookieSecretName" . }}
+{{- end -}}
+
+{{- if .Values.headplane.enabled -}}
+{{- $_ := set .Values.persistence "headplane-config" (include "headscale.headplaneConfigVolume" . | fromYaml) -}}
+{{- $_ := set .Values.persistence "headplane-cookie-secret" (include "headscale.headplaneCookieSecretVolume" . | fromYaml) -}}
+{{- end -}}
 
 {{/* Render the templates */}}
 {{ include "common.all" . }}

@@ -1,0 +1,13 @@
+{{- if .Values.headplane.enabled -}}
+{{- include "common.values.setup" . -}}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "headscale.headplaneConfigMapName" . }}
+  labels:
+    {{- include "common.labels" . | nindent 4 }}
+data:
+  config.yaml: |
+    {{- .Values.headplane.config | toYaml | nindent 4 }}
+{{- end -}}
