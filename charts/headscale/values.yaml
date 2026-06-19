@@ -130,7 +130,7 @@ service:
     selectorLabels:
       role: primary
     ports:
-      http:
+      headplane:
         enabled: true
         protocol: TCP
         port: 80
