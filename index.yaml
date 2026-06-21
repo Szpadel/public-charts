@@ -864,6 +864,23 @@ entries:
   headscale:
   - apiVersion: v2
     appVersion: 0.29.1
+    created: "2026-06-21T14:02:55.223348616+02:00"
+    dependencies:
+    - name: common
+      repository: https://szpadel.github.io/library-charts
+      version: 0.27.0
+    description: An open source, self-hosted implementation of the Tailscale control
+      server
+    digest: 1b85c1fadf2324a3284e50cdc1378c5db96ec9a36a7f410be39ec4726cf0772e
+    name: headscale
+    sources:
+    - https://github.com/juanfont/headscale
+    type: application
+    urls:
+    - https://szpadel.github.io/public-charts/releases/headscale-0.30.2.tgz
+    version: 0.30.2
+  - apiVersion: v2
+    appVersion: 0.29.1
     created: "2026-06-19T10:56:38.630093622+02:00"
     dependencies:
     - name: common
@@ -9524,4 +9541,4 @@ entries:
     urls:
     - https://szpadel.github.io/public-charts/releases/seafile-0.1.0.tgz
     version: 0.1.0
-generated: "2026-06-19T10:56:38.625451135+02:00"
+generated: "2026-06-21T14:02:55.217705534+02:00"

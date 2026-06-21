@@ -42,6 +42,7 @@ headplane:
     integration:
       agent:
         enabled: false
+        pre_authkey: ""
       docker:
         enabled: false
       kubernetes:
@@ -83,7 +84,6 @@ additionalContainers:
     image: "{{ .Values.headplane.image.repository }}:{{ .Values.headplane.image.tag }}"
     imagePullPolicy: "{{ .Values.headplane.image.pullPolicy }}"
     env:
-      HEADPLANE_LOAD_ENV_OVERRIDES: "true"
       HEADPLANE_INTEGRATION__KUBERNETES__POD_NAME:
         valueFrom:
           fieldRef:
