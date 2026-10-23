@@ -1901,6 +1901,26 @@ entries:
     version: 0.1.3
   languagetool-server:
   - apiVersion: v2
+    appVersion: 6.6.1
+    created: "2026-10-23T16:17:36.62170377+02:00"
+    dependencies:
+    - name: common
+      repository: https://szpadel.github.io/library-charts
+      version: 0.27.0
+    description: LanguageTool HTTP Server
+    digest: 956eaeea6eb9481bf2b437751c21bd5339a6e19e41863ba88eac3c1bce038290
+    maintainers:
+    - email: piotrekrogowski@gmail.com
+      name: Szpadel
+    name: languagetool-server
+    sources:
+    - https://github.com/Szpadel/public-charts/tree/master/charts/docker-registry-pull-cache
+    - https://github.com/Szpadel/public-charts/tree/master/containers/cleanup-registry-cache
+    type: application
+    urls:
+    - https://szpadel.github.io/public-charts/releases/languagetool-server-0.4.1.tgz
+    version: 0.4.1
+  - apiVersion: v2
     appVersion: "6.5"
     created: "2025-09-12T08:10:59.220228436+02:00"
     dependencies:
@@ -9541,4 +9561,4 @@ entries:
     urls:
     - https://szpadel.github.io/public-charts/releases/seafile-0.1.0.tgz
     version: 0.1.0
-generated: "2026-06-21T14:02:55.217705534+02:00"
+generated: "2026-10-23T16:17:35.95947815+02:00"

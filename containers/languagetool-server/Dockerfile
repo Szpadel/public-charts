@@ -1,4 +1,4 @@
-FROM alpine@sha256:7eccd4d5d574a3c889b0a6d97b2cdd0308c8e1afc2bba8d467c2b87d879b0c1c as base_alpine
+FROM alpine:3.24.3@sha256:be2656061b536c1883c4034790e21d0a09c5aaaf51968b89368a3c0371ea2c9a AS base_alpine
 
 FROM base_alpine AS build-languagetool
 ENV VERSION=6.6
@@ -22,7 +22,7 @@ WORKDIR /app
 RUN curl -fL https://dl.fbaipublicfiles.com/fasttext/supervised-models/lid.176.bin -O
 
 FROM base_alpine AS languagetool-server
-RUN apk add --no-cache openjdk11-jre-headless tini libhunspell
+RUN apk add --no-cache openjdk17-jre-headless tini libhunspell
 RUN addgroup -S languagetool && adduser -S languagetool -G languagetool
 COPY --from=build-languagetool /app /app
 COPY --from=build-fasttext /app/fasttext /app/fasttext
