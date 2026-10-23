@@ -12,7 +12,7 @@ probes:
 
 image:
   repository: ghcr.io/juanfont/headscale
-  tag: 0.29.1
+  tag: ""
 
 headscaleConfig:
   path: /data/config.yaml
@@ -21,7 +21,7 @@ headplane:
   enabled: true
   image:
     repository: ghcr.io/tale/headplane
-    tag: 0.6.3
+    tag: 0.8.2
     pullPolicy: IfNotPresent
   cookieSecret:
     create: true
@@ -42,7 +42,6 @@ headplane:
     integration:
       agent:
         enabled: false
-        pre_authkey: ""
       docker:
         enabled: false
       kubernetes:
@@ -59,7 +58,7 @@ automountServiceAccountToken: true
 
 initContainers:
   seed-headscale-config:
-    image: docker.io/library/busybox:1.36.1
+    image: docker.io/library/busybox:1.38.0
     command:
       - sh
       - -c

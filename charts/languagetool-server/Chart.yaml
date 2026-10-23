@@ -2,7 +2,7 @@ apiVersion: v2
 name: languagetool-server
 description: "LanguageTool HTTP Server"
 type: application
-version: 0.4.1
+version: 0.4.2
 # renovate: image=ghcr.io/szpadel/languagetool-server
 appVersion: "6.6.1"
 dependencies:
