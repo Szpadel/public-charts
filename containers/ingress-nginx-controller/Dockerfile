@@ -1,9 +1,13 @@
-ARG ALPINE_IMAGE=alpine:3.23.3@sha256:25109184c71bdad752c8312a8623239686a9a2071e8825f20acb8f2198c3f659
-ARG GO_IMAGE=golang:1.26.1-alpine3.23@sha256:2389ebfa5b7f43eeafbd6be0c3700cc46690ef842ad962f6c5bd6be49ed82039
+ARG ALPINE_IMAGE=alpine:3.24.3@sha256:be2656061b536c1883c4034790e21d0a09c5aaaf51968b89368a3c0371ea2c9a
+ARG GO_IMAGE=golang:1.27.3-alpine3.24@sha256:b8c9b82affbbb82a020bbcf998dad2ba9516944ac7e883524642a481a9505e9c
 ARG INGRESS_NGINX_TAG=controller-v1.15.1
 ARG INGRESS_NGINX_COMMIT=0a5901f3c64f11e92e487799b8da3f00cca37515
 ARG CONTROLLER_VERSION=v1.15.1
-ARG NGINX_VERSION=1.30.1
+ARG NGINX_VERSION=1.30.6
+ARG MODSECURITY_LIB_VERSION=v3.0.16
+ARG NJS_VERSION=1.0.2
+ARG OPENTELEMETRY_CPP_VERSION=v1.30.0
+ARG OPENTELEMETRY_PROTO_VERSION=v1.11.1
 
 FROM ${ALPINE_IMAGE} AS upstream-source
 ARG INGRESS_NGINX_TAG
@@ -14,12 +18,29 @@ RUN apk add --no-cache ca-certificates git \
 
 FROM ${ALPINE_IMAGE} AS nginx-builder
 ARG NGINX_VERSION
+ARG MODSECURITY_LIB_VERSION
+ARG NJS_VERSION
+ARG OPENTELEMETRY_CPP_VERSION
+ARG OPENTELEMETRY_PROTO_VERSION
 COPY --from=upstream-source /src/images/nginx/rootfs /
+COPY patches/19_nginx-1.30.6-log_escape_non_ascii.patch /patches/19_nginx-1.27.1-log_escape_non_ascii.patch
+# ModSecurity 3.0.15 and 3.0.16 fix CVEs present in the upstream 3.0.14 pin.
+# https://github.com/owasp-modsecurity/ModSecurity/blob/v3.0.16/CHANGES
+# ModSecurity 3.0.16 requires nested Mbed TLS submodules (configure.ac).
+# njs fixes: https://nginx.org/en/docs/njs/changes.html
+# OpenTelemetry fix: https://github.com/open-telemetry/opentelemetry-cpp/security/advisories/GHSA-5qhm-4rfp-qqvj
+# Match the nginx telemetry module's C++17 build. SDK api/CMakeLists.txt maps ON to C++23.
 RUN rm /patches/28_nginx-1.27.1-CVE-2025-23419.patch \
   && sed -i "s/^export NGINX_VERSION=.*/export NGINX_VERSION=${NGINX_VERSION}/" /build.sh \
+  && sed -i "s/^export MODSECURITY_LIB_VERSION=.*/export MODSECURITY_LIB_VERSION=${MODSECURITY_LIB_VERSION}/" /build.sh \
+  && sed -i "s/^export NJS_VERSION=.*/export NJS_VERSION=${NJS_VERSION}/" /build.sh \
+  && sed -i "s/^export OPENTELEMETRY_CPP_VERSION=.*/export OPENTELEMETRY_CPP_VERSION=${OPENTELEMETRY_CPP_VERSION}/" /build.sh \
+  && sed -i "s/^export OPENTELEMETRY_PROTO_VERSION=.*/export OPENTELEMETRY_PROTO_VERSION=${OPENTELEMETRY_PROTO_VERSION}/" /build.sh \
+  && sed -i '/^cd ModSecurity/,/^sh build.sh/ s/^git submodule update$/git submodule update --init --recursive/' /build.sh \
+  && sed -i 's/-DWITH_STL=ON/-DOTELCPP_WITH_STL=CXX17 -DCMAKE_CXX_STANDARD=17/' /build.sh \
   && apk update \
   && apk upgrade \
-  && apk add -U bash --no-cache \
+  && apk add -U bash pcre2-dev --no-cache \
   && /build.sh
 
 FROM ${ALPINE_IMAGE} AS nginx-base
@@ -38,6 +59,7 @@ RUN apk update \
     bash \
     openssl \
     pcre \
+    pcre2 \
     zlib \
     ca-certificates \
     patch \
@@ -76,7 +98,13 @@ ARG CONTROLLER_VERSION
 ARG INGRESS_NGINX_COMMIT
 COPY --from=upstream-source /src /src
 WORKDIR /src
+# Security fixes: https://vuln.go.dev/ID/GO-2026-6611,
+# https://vuln.go.dev/ID/GO-2026-5024, https://vuln.go.dev/ID/GO-2026-6629.
 RUN apk add --no-cache git \
+  && GOTOOLCHAIN=local go get \
+    golang.org/x/net@v0.61.0 \
+    golang.org/x/sys@v0.49.0 \
+    golang.org/x/text@v0.43.0 \
   && PKG=k8s.io/ingress-nginx \
     ARCH="${TARGETARCH}" \
     COMMIT_SHA="${INGRESS_NGINX_COMMIT}" \
