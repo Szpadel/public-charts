@@ -1,4 +1,4 @@
-FROM fedora:41@sha256:1e071dae113fa75182c493dbf674f5313fc5398e33fbbc302082b766df9c4b00
+FROM fedora:44@sha256:43b29f65a41eb9c35e1cd5323e3bdf3b655c2357a9f4f1ff2f9c2798e5045d80
 
 RUN dnf install -y \
     nfs-ganesha \
