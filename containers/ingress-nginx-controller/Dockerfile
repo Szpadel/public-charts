@@ -3,7 +3,7 @@ ARG GO_IMAGE=golang:1.27.3-alpine3.24@sha256:b8c9b82affbbb82a020bbcf998dad2ba951
 ARG INGRESS_NGINX_TAG=controller-v1.15.1
 ARG INGRESS_NGINX_COMMIT=0a5901f3c64f11e92e487799b8da3f00cca37515
 ARG CONTROLLER_VERSION=v1.15.1
-ARG NGINX_VERSION=1.30.6
+ARG NGINX_VERSION=1.30.7
 ARG MODSECURITY_LIB_VERSION=v3.0.16
 ARG NJS_VERSION=1.0.2
 ARG OPENTELEMETRY_CPP_VERSION=v1.30.0
@@ -23,7 +23,7 @@ ARG NJS_VERSION
 ARG OPENTELEMETRY_CPP_VERSION
 ARG OPENTELEMETRY_PROTO_VERSION
 COPY --from=upstream-source /src/images/nginx/rootfs /
-COPY patches/19_nginx-1.30.6-log_escape_non_ascii.patch /patches/19_nginx-1.27.1-log_escape_non_ascii.patch
+COPY patches/19_nginx-1.30.7-log_escape_non_ascii.patch /patches/19_nginx-1.27.1-log_escape_non_ascii.patch
 # ModSecurity 3.0.15 and 3.0.16 fix CVEs present in the upstream 3.0.14 pin.
 # https://github.com/owasp-modsecurity/ModSecurity/blob/v3.0.16/CHANGES
 # ModSecurity 3.0.16 requires nested Mbed TLS submodules (configure.ac).

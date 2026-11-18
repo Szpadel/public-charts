@@ -1,4 +1,4 @@
-# Port of controller-v1.15.1's log_escape_non_ascii patch for nginx 1.30.6.
+# Port of controller-v1.15.1's log_escape_non_ascii patch for nginx 1.30.7.
 # Preserve the buffer checks added by nginx commit 4d32a2703c79f92b7a99ce3547759cc599d6f83e.
 # Blank context lines use GNU diff --suppress-blank-empty format.
 # Source: https://github.com/kubernetes/ingress-nginx/blob/0a5901f3c64f11e92e487799b8da3f00cca37515/images/nginx/rootfs/patches/19_nginx-1.27.1-log_escape_non_ascii.patch
